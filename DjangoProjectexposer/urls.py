@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Mapping import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('form/',views.form)
+    path('form/',views.form),
+    path('map/',views.map),
 ]
