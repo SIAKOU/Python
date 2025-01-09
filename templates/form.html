@@ -1,0 +1,36 @@
+{% extends './base.html' %}
+{% block content %}
+    <div class="formulaire">
+        <form method="post" style="background: #1b0934">
+            <div class=" form-group d-flex flex-column ">
+                <h2 class="text-center">Enregistrement</h2>
+                <input type="text" id="nom" name="nom" placeholder="nom " class="form-control mt-3" required/>
+                <input class="form-control mt-3" type="text" id="prenom" name="prenom" placeholder="Prenom" required/>
+                <input class="form-control mt-3" type="text" id="adresse" name="adresse" placeholder="Adresse"
+                       required/>
+
+                {#                #}
+                {#                <input class="form-control" type="text" id="latitude" name="latitude" placeholder="Latitude"/>#}
+                {#                <br/>#}
+                {#                <input class="form-control" type="text" id="longitude" name="longitude" placeholder="Longitude"/>#}
+                {#                <br/>#}
+
+                <input type="text" class="form-control mt-3" id="validationCustom03" placeholder="City" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+                <input type="text" class="form-control mt-3" id="validationCustom04" placeholder="State" required>
+                <div class="invalid-feedback">
+                    Please provide a valid state.
+                </div>
+                <input type="text" class="form-control mt-3" id="validationDefault05" placeholder="Zip" required>
+                <div class="buttonn form-group">
+                    <button onclick="afficherCarte();" class=" submit btn btn-primary" type="submit">Valider</button>
+                    <button class=" reset btn btn-danger" type="reset">Annuler</button>
+                </div>
+            </div>
+
+            <br/>
+        </form>
+    </div>
+{% endblock %}
