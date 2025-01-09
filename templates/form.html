@@ -1,36 +1,50 @@
 {% extends './base.html' %}
-{% block content %}
-    <div class="formulaire">
-        <form method="post" style="background: #1b0934">
-            <div class=" form-group d-flex flex-column ">
-                <h2 class="text-center">Enregistrement</h2>
-                <input type="text" id="nom" name="nom" placeholder="nom " class="form-control mt-3" required/>
-                <input class="form-control mt-3" type="text" id="prenom" name="prenom" placeholder="Prenom" required/>
-                <input class="form-control mt-3" type="text" id="adresse" name="adresse" placeholder="Adresse"
-                       required/>
-
-                {#                #}
-                {#                <input class="form-control" type="text" id="latitude" name="latitude" placeholder="Latitude"/>#}
-                {#                <br/>#}
-                {#                <input class="form-control" type="text" id="longitude" name="longitude" placeholder="Longitude"/>#}
-                {#                <br/>#}
-
-                <input type="text" class="form-control mt-3" id="validationCustom03" placeholder="City" required>
-                <div class="invalid-feedback">
-                    Please provide a valid city.
-                </div>
-                <input type="text" class="form-control mt-3" id="validationCustom04" placeholder="State" required>
-                <div class="invalid-feedback">
-                    Please provide a valid state.
-                </div>
-                <input type="text" class="form-control mt-3" id="validationDefault05" placeholder="Zip" required>
-                <div class="buttonn form-group">
-                    <button onclick="afficherCarte();" class=" submit btn btn-primary" type="submit">Valider</button>
-                    <button class=" reset btn btn-danger" type="reset">Annuler</button>
+{% block content %}s
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form method="post">
+                            <h2 class="text-center mb-4">Enregistrement</h2>
+                            <div class="form-group">
+                                <input type="text" id="nom" name="nom" placeholder="Nom" class="form-control" required/>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" id="prenom" name="prenom" placeholder="Prénom" class="form-control"
+                                       required/>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" id="adresse" name="adresse" placeholder="Adresse"
+                                       class="form-control" required/>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" id="validationCustom03" placeholder="City" class="form-control"
+                                       required/>
+                                <div class="invalid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" id="validationCustom04" placeholder="State" class="form-control"
+                                       required/>
+                                <div class="invalid-feedback">
+                                    Please provide a valid state.
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" id="validationDefault05" placeholder="Zip" class="form-control"
+                                       required/>
+                            </div>
+                            <div class="form-group mt-4 d-flex justify-content-between">
+                                <button onclick="afficherCarte();" class="btn btn-primary" type="submit">Valider
+                                </button>
+                                <button class="btn btn-danger" type="reset">Annuler</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-
-            <br/>
-        </form>
+        </div>
     </div>
 {% endblock %}
