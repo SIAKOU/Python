@@ -1382,7 +1382,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="512" parent="1" name="gesclient">
-      <LastIntrospectionLocalTimestamp>2025-01-10.20:20:42</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-01-10.20:43:31</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="513" parent="1" name="gescom">
@@ -1410,7 +1410,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8mb3_bin</CollationName>
     </schema>
     <schema id="521" parent="1" name="pythonproject">
-      <LastIntrospectionLocalTimestamp>2025-01-10.20:20:43</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-01-10.20:43:33</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="522" parent="1" name="revison">
@@ -1473,251 +1473,447 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="540" parent="534" name="id_cat">
+    <table id="540" parent="521" name="adresse">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="541" parent="521" name="client">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="542" parent="521" name="django_migrations">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="543" parent="521" name="mapping_adresse">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="544" parent="534" name="id_cat">
       <AutoIncrement>38</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="541" parent="534" name="lib_cat">
+    <column id="545" parent="534" name="lib_cat">
       <Position>2</Position>
       <StoredType>varchar(500)|0s</StoredType>
     </column>
-    <column id="542" parent="534" name="img_cat">
+    <column id="546" parent="534" name="img_cat">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(90)|0s</StoredType>
     </column>
-    <column id="543" parent="534" name="nom_cat">
+    <column id="547" parent="534" name="nom_cat">
       <Position>4</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <index id="544" parent="534" name="PRIMARY">
+    <index id="548" parent="534" name="PRIMARY">
       <ColNames>id_cat</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="545" parent="534" name="PRIMARY">
+    <key id="549" parent="534" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="546" parent="535" name="id_client">
+    <column id="550" parent="535" name="id_client">
       <AutoIncrement>52</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="547" parent="535" name="nom__client">
+    <column id="551" parent="535" name="nom__client">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(128)|0s</StoredType>
     </column>
-    <column id="548" parent="535" name="autreinfo_client">
+    <column id="552" parent="535" name="autreinfo_client">
       <Position>3</Position>
       <StoredType>varchar(1021)|0s</StoredType>
     </column>
-    <column id="549" parent="535" name="email">
+    <column id="553" parent="535" name="email">
       <Position>4</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="550" parent="535" name="password">
+    <column id="554" parent="535" name="password">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <index id="551" parent="535" name="PRIMARY">
+    <index id="555" parent="535" name="PRIMARY">
       <ColNames>id_client</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="552" parent="535" name="PRIMARY">
+    <key id="556" parent="535" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="553" parent="536" name="id_prod">
+    <column id="557" parent="536" name="id_prod">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>varchar(5)|0s</StoredType>
     </column>
-    <column id="554" parent="536" name="id_fact">
+    <column id="558" parent="536" name="id_fact">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="555" parent="536" name="qte_det">
+    <column id="559" parent="536" name="qte_det">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <foreign-key id="556" parent="536" name="fk_detailler2">
+    <foreign-key id="560" parent="536" name="fk_detailler2">
       <ColNames>id_fact</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_fact</RefColNames>
       <RefTableName>facture</RefTableName>
     </foreign-key>
-    <index id="557" parent="536" name="PRIMARY">
+    <index id="561" parent="536" name="PRIMARY">
       <ColNames>id_prod
 id_fact</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="558" parent="536" name="fk_detailler2">
+    <index id="562" parent="536" name="fk_detailler2">
       <ColNames>id_fact</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="559" parent="536" name="PRIMARY">
+    <key id="563" parent="536" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="560" parent="537" name="id_fact">
+    <column id="564" parent="537" name="id_fact">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="561" parent="537" name="id_four">
+    <column id="565" parent="537" name="id_four">
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="562" parent="537" name="id_client">
+    <column id="566" parent="537" name="id_client">
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="563" parent="537" name="date_fact">
+    <column id="567" parent="537" name="date_fact">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="564" parent="537" name="remise_fact">
+    <column id="568" parent="537" name="remise_fact">
       <Position>5</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="565" parent="537" name="livraison_fact">
+    <column id="569" parent="537" name="livraison_fact">
       <Position>6</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="566" parent="537" name="obserb_fact">
+    <column id="570" parent="537" name="obserb_fact">
       <Position>7</Position>
       <StoredType>varchar(1024)|0s</StoredType>
     </column>
-    <foreign-key id="567" parent="537" name="fk_gerer">
+    <foreign-key id="571" parent="537" name="fk_gerer">
       <ColNames>id_four</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_four</RefColNames>
       <RefTableName>fournisseur</RefTableName>
     </foreign-key>
-    <foreign-key id="568" parent="537" name="fk_soumettre">
+    <foreign-key id="572" parent="537" name="fk_soumettre">
       <ColNames>id_client</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_client</RefColNames>
       <RefTableName>client</RefTableName>
     </foreign-key>
-    <index id="569" parent="537" name="PRIMARY">
+    <index id="573" parent="537" name="PRIMARY">
       <ColNames>id_fact</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="570" parent="537" name="fk_gerer">
+    <index id="574" parent="537" name="fk_gerer">
       <ColNames>id_four</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="571" parent="537" name="fk_soumettre">
+    <index id="575" parent="537" name="fk_soumettre">
       <ColNames>id_client</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="572" parent="537" name="PRIMARY">
+    <key id="576" parent="537" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="573" parent="538" name="id_four">
+    <column id="577" parent="538" name="id_four">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="574" parent="538" name="sigle_four">
+    <column id="578" parent="538" name="sigle_four">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(10)|0s</StoredType>
     </column>
-    <column id="575" parent="538" name="lib_four">
+    <column id="579" parent="538" name="lib_four">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="576" parent="538" name="tel_four">
+    <column id="580" parent="538" name="tel_four">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(15)|0s</StoredType>
     </column>
-    <column id="577" parent="538" name="email_four">
+    <column id="581" parent="538" name="email_four">
       <Position>5</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="578" parent="538" name="autreinfo_four">
+    <column id="582" parent="538" name="autreinfo_four">
       <Position>6</Position>
       <StoredType>varchar(1021)|0s</StoredType>
     </column>
-    <index id="579" parent="538" name="PRIMARY">
+    <index id="583" parent="538" name="PRIMARY">
       <ColNames>id_four</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="580" parent="538" name="PRIMARY">
+    <key id="584" parent="538" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="581" parent="539" name="id_prod">
+    <column id="585" parent="539" name="id_prod">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="582" parent="539" name="id_cat">
+    <column id="586" parent="539" name="id_cat">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="583" parent="539" name="lib_prod">
+    <column id="587" parent="539" name="lib_prod">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(128)|0s</StoredType>
     </column>
-    <column id="584" parent="539" name="pu_prod">
+    <column id="588" parent="539" name="pu_prod">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="585" parent="539" name="info_prod">
+    <column id="589" parent="539" name="info_prod">
       <Comment>informations supplementaires du produit</Comment>
       <Position>5</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="586" parent="539" name="img_dir">
+    <column id="590" parent="539" name="img_dir">
       <DefaultExpression>&apos;assests&apos;</DefaultExpression>
       <Position>6</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <foreign-key id="587" parent="539" name="fk_contenir">
+    <foreign-key id="591" parent="539" name="fk_contenir">
       <ColNames>id_cat</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_cat</RefColNames>
       <RefTableName>categorie</RefTableName>
     </foreign-key>
-    <index id="588" parent="539" name="PRIMARY">
+    <index id="592" parent="539" name="PRIMARY">
       <ColNames>id_prod</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="589" parent="539" name="fk_contenir">
+    <index id="593" parent="539" name="fk_contenir">
       <ColNames>id_cat</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="590" parent="539" name="PRIMARY">
+    <key id="594" parent="539" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="595" parent="540" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="596" parent="540" name="num_rue">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="597" parent="540" name="nom_rue">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="598" parent="540" name="img_client">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="599" parent="540" name="ville">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="600" parent="540" name="pays">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="601" parent="540" name="latitude">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="602" parent="540" name="longitude">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <index id="603" parent="540" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="604" parent="540" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="605" parent="541" name="id_client">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="606" parent="541" name="nom">
+      <DefaultExpression>&apos;Esdeath&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="607" parent="541" name="prenom">
+      <DefaultExpression>&apos;Hinata&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="608" parent="541" name="adresse_id">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="609" parent="541" name="email">
+      <Position>5</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <foreign-key id="610" parent="541" name="client_ibfk_1">
+      <ColNames>adresse_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>adresse</RefTableName>
+    </foreign-key>
+    <index id="611" parent="541" name="PRIMARY">
+      <ColNames>id_client</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="612" parent="541" name="adresse_id">
+      <ColNames>adresse_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="613" parent="541" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="614" parent="542" name="id">
+      <AutoIncrement>3</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint(20)|0s</StoredType>
+    </column>
+    <column id="615" parent="542" name="app">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="616" parent="542" name="name">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="617" parent="542" name="applied">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <index id="618" parent="542" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="619" parent="542" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="620" parent="543" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="621" parent="543" name="num_rue">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="622" parent="543" name="nom_rue">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="623" parent="543" name="img_client">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <column id="624" parent="543" name="ville">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="625" parent="543" name="pays">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="626" parent="543" name="latitude">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>double|0s</StoredType>
+    </column>
+    <column id="627" parent="543" name="longitude">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>double|0s</StoredType>
+    </column>
+    <index id="628" parent="543" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="629" parent="543" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea7e5d3-ae6a-4d13-8019-f617a54368e1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea7e5d3-ae6a-4d13-8019-f617a54368e1/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea7e5d3-ae6a-4d13-8019-f617a54368e1/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea7e5d3-ae6a-4d13-8019-f617a54368e1/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/911fcc35-ba8d-4df8-b94e-2f1d049cef62.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/911fcc35-ba8d-4df8-b94e-2f1d049cef62.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapping/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapping/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapping/migrations/0002_adresse_delete_categorie_delete_detailler_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapping/migrations/0003_remove_client_autreinfo_client_remove_client_email_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapping/migrations/0004_alter_adresse_img_client_alter_adresse_nom_rue_and_more.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mapping/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/map.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,30 +53,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.DjangoProjectexposer.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;add/modification-to-database&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.DjangoProjectexposer.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "add/new-modifications-on-map-and-models",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="DjangoProjectexposer" type="Python.DjangoServer" factoryName="Django server">
       <module name="DjangoProjectexposer" />
@@ -110,8 +107,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
-        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
@@ -126,7 +123,8 @@
       <workItem from="1736238485874" duration="1435000" />
       <workItem from="1736407030210" duration="8060000" />
       <workItem from="1736423753558" duration="17853000" />
-      <workItem from="1736501278232" duration="13362000" />
+      <workItem from="1736501278232" duration="13589000" />
+      <workItem from="1736540723932" duration="1622000" />
     </task>
     <servers />
   </component>
