@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/JS/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea7e5d3-ae6a-4d13-8019-f617a54368e1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea7e5d3-ae6a-4d13-8019-f617a54368e1/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea7e5d3-ae6a-4d13-8019-f617a54368e1/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea7e5d3-ae6a-4d13-8019-f617a54368e1/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/911fcc35-ba8d-4df8-b94e-2f1d049cef62.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/911fcc35-ba8d-4df8-b94e-2f1d049cef62.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mapping/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mapping/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/map.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/map.html" afterDir="false" />
     </list>
@@ -34,18 +35,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Mrjojono"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Mrjojono&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Mrjojono/PythonPorject.git",
-    "accountId": "088b5a83-e0ea-4879-a429-2e212efdb518"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mrjojono/PythonPorject.git&quot;,
+    &quot;accountId&quot;: &quot;088b5a83-e0ea-4879-a429-2e212efdb518&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -55,29 +56,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.DjangoProjectexposer.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "add/base-2",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.DjangoProjectexposer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;add/modification-to-database&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="DjangoProjectexposer" type="Python.DjangoServer" factoryName="Django server">
       <module name="DjangoProjectexposer" />
@@ -123,7 +125,8 @@
       <updated>1736238484207</updated>
       <workItem from="1736238485874" duration="1435000" />
       <workItem from="1736407030210" duration="8060000" />
-      <workItem from="1736423753558" duration="17738000" />
+      <workItem from="1736423753558" duration="17853000" />
+      <workItem from="1736501278232" duration="13362000" />
     </task>
     <servers />
   </component>

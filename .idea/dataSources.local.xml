@@ -13,9 +13,9 @@
       <schema-mapping>
         <introspection-scope>
           <node kind="schema">
+            <name qname="pythonproject" />
             <name qname="@" />
             <name qname="gesclient" />
-            <name qname="pythonproject" />
           </node>
         </introspection-scope>
       </schema-mapping>

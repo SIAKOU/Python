@@ -77,50 +77,6 @@ class AuthUserUserPermissions(models.Model):
         unique_together = (('user', 'permission'),)
 
 
-class Categorie(models.Model):
-    id_cat = models.AutoField(primary_key=True)
-    lib_cat = models.CharField(max_length=500, blank=True, null=True)
-    img_cat = models.CharField(max_length=90)
-    nom_cat = models.CharField(max_length=30, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'categorie'
-
-
-class Client(models.Model):
-    id_client = models.AutoField(primary_key=True)
-    nom_client = models.CharField(db_column='nom__client',
-                                  max_length=128)
-    # Field renamed because it contained more than one '_' in a row.
-    prenom_client = models.CharField(db_column='prenom__client',
-                                  max_length=128)
-    adresse_client = models.CharField(db_column='adresse__client',
-                                     max_length=200)
-    city_client = models.CharField(db_column='city__client',
-                                      max_length=200)
-    state_client = models.CharField(db_column='state__client',
-                                   max_length=200)
-    autreinfo_client = models.CharField(max_length=1021, blank=True, null=True)
-    email = models.CharField(max_length=50, blank=True, null=True)
-    password = models.CharField(max_length=255)
-
-    class Meta:
-        managed = False
-        db_table = 'client'
-
-class Detailler(models.Model):
-    id_prod = models.CharField(primary_key=True,
-                               max_length=5)  # The composite primary key (id_prod, id_fact) found, that is not supported. The first column is selected.
-    id_fact = models.ForeignKey('Facture', models.DO_NOTHING, db_column='id_fact')
-    qte_det = models.IntegerField()
-
-    class Meta:
-        managed = False
-        db_table = 'detailler'
-        unique_together = (('id_prod', 'id_fact'),)
-
-
 class DjangoAdminLog(models.Model):
     action_time = models.DateTimeField()
     object_id = models.TextField(blank=True, null=True)
@@ -166,41 +122,33 @@ class DjangoSession(models.Model):
         db_table = 'django_session'
 
 
-class Facture(models.Model):
-    id_fact = models.AutoField(primary_key=True)
-    id_four = models.ForeignKey('Fournisseur', models.DO_NOTHING, db_column='id_four', blank=True, null=True)
-    id_client = models.ForeignKey(Client, models.DO_NOTHING, db_column='id_client', blank=True, null=True)
-    date_fact = models.DateField()
-    remise_fact = models.IntegerField(blank=True, null=True)
-    livraison_fact = models.DateTimeField(blank=True, null=True)
-    obserb_fact = models.CharField(max_length=1024, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'facture'
+from django.db import models
 
 
-class Fournisseur(models.Model):
-    id_four = models.AutoField(primary_key=True)
-    sigle_four = models.CharField(max_length=10)
-    lib_four = models.CharField(max_length=255)
-    tel_four = models.CharField(max_length=15)
-    email_four = models.CharField(max_length=255, blank=True, null=True)
-    autreinfo_four = models.CharField(max_length=1021, blank=True, null=True)
+class Adresse(models.Model):
+    id = models.AutoField(primary_key=True)  # Auto-generated primary key
+    num_rue = models.IntegerField(verbose_name="Numéro de la rue")  # Street number
+    nom_rue = models.CharField(max_length=100, verbose_name="Nom de la rue")  # Street name
+    img_client = models.ImageField(upload_to='images/', verbose_name="Image du client")  # Client image
+    ville = models.CharField(max_length=100, verbose_name="Ville")  # City
+    pays = models.CharField(max_length=100, verbose_name="Pays")  # Country
+    latitude = models.FloatField()
+    longitude = models.FloatField()
 
-    class Meta:
-        managed = False
-        db_table = 'fournisseur'
+    def __str__(self):
+        return f"{self.num_rue} {self.nom_rue}, {self.ville}, {self.pays}"
 
 
-class Produit(models.Model):
-    id_prod = models.CharField(primary_key=True, max_length=255)
-    id_cat = models.ForeignKey(Categorie, models.DO_NOTHING, db_column='id_cat')
-    lib_prod = models.CharField(max_length=128)
-    pu_prod = models.IntegerField()
-    info_prod = models.TextField(blank=True, null=True, db_comment='informations supplementaires du produit')
-    img_dir = models.CharField(max_length=50, blank=True, null=True)
+class Client(models.Model):
+    id_client = models.AutoField(primary_key=True)
+    nom = models.CharField(max_length=100, default="Esdeath", verbose_name="Nom")
+    prenom = models.CharField(max_length=100, default="Hinata", verbose_name="Prénom")
+    adresse = models.ForeignKey(
+        Adresse,
+        on_delete=models.CASCADE,
+        related_name="clients",
+        verbose_name="Adresse"
+    )
 
-    class Meta:
-        managed = False
-        db_table = 'produit'
+    def __str__(self):
+        return f"{self.nom} {self.prenom}, {self.adresse}"

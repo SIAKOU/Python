@@ -1,35 +1,25 @@
-.carte{
+.carte {
     border: 2px solid black;
-    border-radius: 10px ;
-}
-#map {
-    height: 500px;
-    width: 500%;
-    border: 2px solid #e6e0e0;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    max-width: 500px;
-    margin-left: 40px;
-}
-/**
- * @license
- * Copyright 2019 Google LLC. All Rights Reserved.
- * SPDX-License-Identifier: Apache-2.0
- */
-/*
- * Always set the map height explicitly to define the size of the div element
- * that contains the map.
- */
-#map {
-  height: 100%;
+    border-radius: 10px;
+    height: 600px; /* Hauteur fixée */
+    width: 100%;
 }
 
-/*
- * Optional: Makes the sample page fill the window.
- */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+#map {
+    height: 100%; /* La carte remplit entièrement son parent */
+    width: 100%; /* Largeur correspondante à celle du parent */
+    border: 2px solid #e6e0e0;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
