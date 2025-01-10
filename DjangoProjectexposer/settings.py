@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'DjangoProjectexposer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'pythonProject',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': 'localhost',  # ou l'adresse IP de votre serveur MySQL
+        'PORT': '3306',       # Port par défaut de MySQL
     }
 }
 
