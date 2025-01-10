@@ -1,4 +1,32 @@
 {% extends './base.html' %}
 {% block content %}
-    <h1>hello</h1>
+    <div class="container d-flex flex-row mt-5 gap-4 h-auto">
+        <diV class=" border-2 border-black col-3 ">
+            {#            ceci est la partie concernant les info sur le clients#}
+            <form class="  form-group d-flex flex-column gap-4">
+                <div class="form-control">
+                    <img src="" alt="image indispensable" class="h-50">
+                </div>
+                <input class="form-control" type="text" readonly value="nom">
+                <input class="form-control" type="text" readonly value="prénom">
+                <input class="form-control" type="text" readonly value="Adresse">
+                <textarea class="form-control" type="text" readonly value="autre info"></textarea>
+                <label class="form-label">Modifier manuellement
+                    <input class="form-control mt-2" type="text" value="Longitude">
+                    <input class="form-control mt-3" type="text" value="Latitude">
+                </label>
+
+                <div class=" d-flex flex-row  gap-5 ml-5 ">
+                    <button class=" btn btn-primary">Update</button>
+                    <button class=" btn btn-danger">Delete</button>
+                </div>
+            </form>
+
+
+        </diV>
+        <hr/>
+        <div  class=" carte  col-9  border-black ">
+            <div id="map"></div>
+        </div>
+    </div>
 {% endblock %}

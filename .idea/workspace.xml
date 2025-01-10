@@ -5,9 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/base-2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapping/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapping/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/map.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -54,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "add/form",
+    "git-widget-placeholder": "add/base-2",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -114,7 +123,7 @@
       <updated>1736238484207</updated>
       <workItem from="1736238485874" duration="1435000" />
       <workItem from="1736407030210" duration="8060000" />
-      <workItem from="1736423753558" duration="3622000" />
+      <workItem from="1736423753558" duration="17738000" />
     </task>
     <servers />
   </component>
