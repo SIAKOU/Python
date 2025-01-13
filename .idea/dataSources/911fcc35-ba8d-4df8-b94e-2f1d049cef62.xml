@@ -1382,7 +1382,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="512" parent="1" name="gesclient">
-      <LastIntrospectionLocalTimestamp>2025-01-10.20:43:31</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-01-12.16:49:33</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="513" parent="1" name="gescom">
@@ -1410,7 +1410,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8mb3_bin</CollationName>
     </schema>
     <schema id="521" parent="1" name="pythonproject">
-      <LastIntrospectionLocalTimestamp>2025-01-10.20:43:33</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-01-12.16:49:35</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="522" parent="1" name="revison">
@@ -1473,450 +1473,762 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="540" parent="521" name="adresse">
+    <table id="540" parent="521" name="auth_group">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="541" parent="521" name="client">
+    <table id="541" parent="521" name="auth_group_permissions">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="542" parent="521" name="django_migrations">
+    <table id="542" parent="521" name="auth_permission">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="543" parent="521" name="mapping_adresse">
+    <table id="543" parent="521" name="django_content_type">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="544" parent="534" name="id_cat">
+    <table id="544" parent="521" name="django_migrations">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="545" parent="521" name="djangoprojectexposer_adresse">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="546" parent="521" name="djangoprojectexposer_client">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="547" parent="521" name="djangoprojectexposer_user">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="548" parent="521" name="djangoprojectexposer_user_groups">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="549" parent="521" name="djangoprojectexposer_user_user_permissions">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="550" parent="534" name="id_cat">
       <AutoIncrement>38</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="545" parent="534" name="lib_cat">
+    <column id="551" parent="534" name="lib_cat">
       <Position>2</Position>
       <StoredType>varchar(500)|0s</StoredType>
     </column>
-    <column id="546" parent="534" name="img_cat">
+    <column id="552" parent="534" name="img_cat">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(90)|0s</StoredType>
     </column>
-    <column id="547" parent="534" name="nom_cat">
+    <column id="553" parent="534" name="nom_cat">
       <Position>4</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <index id="548" parent="534" name="PRIMARY">
+    <index id="554" parent="534" name="PRIMARY">
       <ColNames>id_cat</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="549" parent="534" name="PRIMARY">
+    <key id="555" parent="534" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="550" parent="535" name="id_client">
+    <column id="556" parent="535" name="id_client">
       <AutoIncrement>52</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="551" parent="535" name="nom__client">
+    <column id="557" parent="535" name="nom__client">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(128)|0s</StoredType>
     </column>
-    <column id="552" parent="535" name="autreinfo_client">
+    <column id="558" parent="535" name="autreinfo_client">
       <Position>3</Position>
       <StoredType>varchar(1021)|0s</StoredType>
     </column>
-    <column id="553" parent="535" name="email">
+    <column id="559" parent="535" name="email">
       <Position>4</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="554" parent="535" name="password">
+    <column id="560" parent="535" name="password">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <index id="555" parent="535" name="PRIMARY">
+    <index id="561" parent="535" name="PRIMARY">
       <ColNames>id_client</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="556" parent="535" name="PRIMARY">
+    <key id="562" parent="535" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="557" parent="536" name="id_prod">
+    <column id="563" parent="536" name="id_prod">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>varchar(5)|0s</StoredType>
     </column>
-    <column id="558" parent="536" name="id_fact">
+    <column id="564" parent="536" name="id_fact">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="559" parent="536" name="qte_det">
+    <column id="565" parent="536" name="qte_det">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <foreign-key id="560" parent="536" name="fk_detailler2">
+    <foreign-key id="566" parent="536" name="fk_detailler2">
       <ColNames>id_fact</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_fact</RefColNames>
       <RefTableName>facture</RefTableName>
     </foreign-key>
-    <index id="561" parent="536" name="PRIMARY">
+    <index id="567" parent="536" name="PRIMARY">
       <ColNames>id_prod
 id_fact</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="562" parent="536" name="fk_detailler2">
+    <index id="568" parent="536" name="fk_detailler2">
       <ColNames>id_fact</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="563" parent="536" name="PRIMARY">
+    <key id="569" parent="536" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="564" parent="537" name="id_fact">
+    <column id="570" parent="537" name="id_fact">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="565" parent="537" name="id_four">
+    <column id="571" parent="537" name="id_four">
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="566" parent="537" name="id_client">
+    <column id="572" parent="537" name="id_client">
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="567" parent="537" name="date_fact">
+    <column id="573" parent="537" name="date_fact">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="568" parent="537" name="remise_fact">
+    <column id="574" parent="537" name="remise_fact">
       <Position>5</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="569" parent="537" name="livraison_fact">
+    <column id="575" parent="537" name="livraison_fact">
       <Position>6</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="570" parent="537" name="obserb_fact">
+    <column id="576" parent="537" name="obserb_fact">
       <Position>7</Position>
       <StoredType>varchar(1024)|0s</StoredType>
     </column>
-    <foreign-key id="571" parent="537" name="fk_gerer">
+    <foreign-key id="577" parent="537" name="fk_gerer">
       <ColNames>id_four</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_four</RefColNames>
       <RefTableName>fournisseur</RefTableName>
     </foreign-key>
-    <foreign-key id="572" parent="537" name="fk_soumettre">
+    <foreign-key id="578" parent="537" name="fk_soumettre">
       <ColNames>id_client</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_client</RefColNames>
       <RefTableName>client</RefTableName>
     </foreign-key>
-    <index id="573" parent="537" name="PRIMARY">
+    <index id="579" parent="537" name="PRIMARY">
       <ColNames>id_fact</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="574" parent="537" name="fk_gerer">
+    <index id="580" parent="537" name="fk_gerer">
       <ColNames>id_four</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="575" parent="537" name="fk_soumettre">
+    <index id="581" parent="537" name="fk_soumettre">
       <ColNames>id_client</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="576" parent="537" name="PRIMARY">
+    <key id="582" parent="537" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="577" parent="538" name="id_four">
+    <column id="583" parent="538" name="id_four">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="578" parent="538" name="sigle_four">
+    <column id="584" parent="538" name="sigle_four">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(10)|0s</StoredType>
     </column>
-    <column id="579" parent="538" name="lib_four">
+    <column id="585" parent="538" name="lib_four">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="580" parent="538" name="tel_four">
+    <column id="586" parent="538" name="tel_four">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(15)|0s</StoredType>
     </column>
-    <column id="581" parent="538" name="email_four">
+    <column id="587" parent="538" name="email_four">
       <Position>5</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="582" parent="538" name="autreinfo_four">
+    <column id="588" parent="538" name="autreinfo_four">
       <Position>6</Position>
       <StoredType>varchar(1021)|0s</StoredType>
     </column>
-    <index id="583" parent="538" name="PRIMARY">
+    <index id="589" parent="538" name="PRIMARY">
       <ColNames>id_four</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="584" parent="538" name="PRIMARY">
+    <key id="590" parent="538" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="585" parent="539" name="id_prod">
+    <column id="591" parent="539" name="id_prod">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="586" parent="539" name="id_cat">
+    <column id="592" parent="539" name="id_cat">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="587" parent="539" name="lib_prod">
+    <column id="593" parent="539" name="lib_prod">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(128)|0s</StoredType>
     </column>
-    <column id="588" parent="539" name="pu_prod">
+    <column id="594" parent="539" name="pu_prod">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="589" parent="539" name="info_prod">
+    <column id="595" parent="539" name="info_prod">
       <Comment>informations supplementaires du produit</Comment>
       <Position>5</Position>
       <StoredType>text|0s</StoredType>
     </column>
-    <column id="590" parent="539" name="img_dir">
+    <column id="596" parent="539" name="img_dir">
       <DefaultExpression>&apos;assests&apos;</DefaultExpression>
       <Position>6</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <foreign-key id="591" parent="539" name="fk_contenir">
+    <foreign-key id="597" parent="539" name="fk_contenir">
       <ColNames>id_cat</ColNames>
       <OnUpdate>cascade</OnUpdate>
       <RefColNames>id_cat</RefColNames>
       <RefTableName>categorie</RefTableName>
     </foreign-key>
-    <index id="592" parent="539" name="PRIMARY">
+    <index id="598" parent="539" name="PRIMARY">
       <ColNames>id_prod</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="593" parent="539" name="fk_contenir">
+    <index id="599" parent="539" name="fk_contenir">
       <ColNames>id_cat</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="594" parent="539" name="PRIMARY">
+    <key id="600" parent="539" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="595" parent="540" name="id">
+    <column id="601" parent="540" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="596" parent="540" name="num_rue">
+    <column id="602" parent="540" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="597" parent="540" name="nom_rue">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="598" parent="540" name="img_client">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(255)|0s</StoredType>
-    </column>
-    <column id="599" parent="540" name="ville">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="600" parent="540" name="pays">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="601" parent="540" name="latitude">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>float|0s</StoredType>
-    </column>
-    <column id="602" parent="540" name="longitude">
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>float|0s</StoredType>
+      <StoredType>varchar(150)|0s</StoredType>
     </column>
     <index id="603" parent="540" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="604" parent="540" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="605" parent="541" name="id_client">
-      <AutoIncrement>1</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="606" parent="541" name="nom">
-      <DefaultExpression>&apos;Esdeath&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="607" parent="541" name="prenom">
-      <DefaultExpression>&apos;Hinata&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <column id="608" parent="541" name="adresse_id">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="609" parent="541" name="email">
-      <Position>5</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <foreign-key id="610" parent="541" name="client_ibfk_1">
-      <ColNames>adresse_id</ColNames>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>id</RefColNames>
-      <RefTableName>adresse</RefTableName>
-    </foreign-key>
-    <index id="611" parent="541" name="PRIMARY">
-      <ColNames>id_client</ColNames>
+    <index id="604" parent="540" name="name">
+      <ColNames>name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="612" parent="541" name="adresse_id">
-      <ColNames>adresse_id</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="613" parent="541" name="PRIMARY">
+    <key id="605" parent="540" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="614" parent="542" name="id">
-      <AutoIncrement>3</AutoIncrement>
+    <key id="606" parent="540" name="name">
+      <UnderlyingIndexName>name</UnderlyingIndexName>
+    </key>
+    <column id="607" parent="541" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint(20)|0s</StoredType>
     </column>
-    <column id="615" parent="542" name="app">
+    <column id="608" parent="541" name="group_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>varchar(255)|0s</StoredType>
+      <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="616" parent="542" name="name">
+    <column id="609" parent="541" name="permission_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>varchar(255)|0s</StoredType>
+      <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="617" parent="542" name="applied">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>datetime(6)|0s</StoredType>
-    </column>
-    <index id="618" parent="542" name="PRIMARY">
+    <foreign-key id="610" parent="541" name="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id">
+      <ColNames>group_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_group</RefTableName>
+    </foreign-key>
+    <foreign-key id="611" parent="541" name="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_permission</RefTableName>
+    </foreign-key>
+    <index id="612" parent="541" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="619" parent="542" name="PRIMARY">
+    <index id="613" parent="541" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+      <ColNames>group_id
+permission_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="614" parent="541" name="auth_group_permissio_permission_id_84c5c92e_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="615" parent="541" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="620" parent="543" name="id">
+    <key id="616" parent="541" name="auth_group_permissions_group_id_permission_id_0cd325b0_uniq">
+      <UnderlyingIndexName>auth_group_permissions_group_id_permission_id_0cd325b0_uniq</UnderlyingIndexName>
+    </key>
+    <column id="617" parent="542" name="id">
+      <AutoIncrement>25</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="618" parent="542" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="619" parent="542" name="content_type_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="620" parent="542" name="codename">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <foreign-key id="621" parent="542" name="auth_permission_content_type_id_2f476e4b_fk_django_co">
+      <ColNames>content_type_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>django_content_type</RefTableName>
+    </foreign-key>
+    <index id="622" parent="542" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="623" parent="542" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+      <ColNames>content_type_id
+codename</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="624" parent="542" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="625" parent="542" name="auth_permission_content_type_id_codename_01ab375a_uniq">
+      <UnderlyingIndexName>auth_permission_content_type_id_codename_01ab375a_uniq</UnderlyingIndexName>
+    </key>
+    <column id="626" parent="543" name="id">
+      <AutoIncrement>7</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="627" parent="543" name="app_label">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="628" parent="543" name="model">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <index id="629" parent="543" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="630" parent="543" name="django_content_type_app_label_model_76bd3d3b_uniq">
+      <ColNames>app_label
+model</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="631" parent="543" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="632" parent="543" name="django_content_type_app_label_model_76bd3d3b_uniq">
+      <UnderlyingIndexName>django_content_type_app_label_model_76bd3d3b_uniq</UnderlyingIndexName>
+    </key>
+    <column id="633" parent="544" name="id">
+      <AutoIncrement>16</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint(20)|0s</StoredType>
+    </column>
+    <column id="634" parent="544" name="app">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="635" parent="544" name="name">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="636" parent="544" name="applied">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <index id="637" parent="544" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="638" parent="544" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="639" parent="545" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="621" parent="543" name="num_rue">
+    <column id="640" parent="545" name="num_rue">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="622" parent="543" name="nom_rue">
+    <column id="641" parent="545" name="nom_rue">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="623" parent="543" name="img_client">
+    <column id="642" parent="545" name="city">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>varchar(200)|0s</StoredType>
+      <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="624" parent="543" name="ville">
+    <column id="643" parent="545" name="state">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="625" parent="543" name="pays">
+    <column id="644" parent="545" name="latitude">
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>double|0s</StoredType>
     </column>
-    <column id="626" parent="543" name="latitude">
+    <column id="645" parent="545" name="longitude">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>double|0s</StoredType>
     </column>
-    <column id="627" parent="543" name="longitude">
+    <column id="646" parent="545" name="id_client_id">
       <NotNull>1</NotNull>
       <Position>8</Position>
-      <StoredType>double|0s</StoredType>
+      <StoredType>int(11)|0s</StoredType>
     </column>
-    <index id="628" parent="543" name="PRIMARY">
+    <foreign-key id="647" parent="545" name="DjangoProjectexposer_id_client_id_e5dcbabc_fk_DjangoPro">
+      <ColNames>id_client_id</ColNames>
+      <RefColNames>id_client</RefColNames>
+      <RefTableName>djangoprojectexposer_client</RefTableName>
+    </foreign-key>
+    <index id="648" parent="545" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="629" parent="543" name="PRIMARY">
+    <index id="649" parent="545" name="DjangoProjectexposer_id_client_id_e5dcbabc_fk_DjangoPro">
+      <ColNames>id_client_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="650" parent="545" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="651" parent="546" name="id_client">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="652" parent="546" name="nom">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="653" parent="546" name="prenom">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="654" parent="546" name="img_client">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="655" parent="546" name="email">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <index id="656" parent="546" name="PRIMARY">
+      <ColNames>id_client</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="657" parent="546" name="email">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="658" parent="546" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="659" parent="546" name="email">
+      <UnderlyingIndexName>email</UnderlyingIndexName>
+    </key>
+    <column id="660" parent="547" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint(20)|0s</StoredType>
+    </column>
+    <column id="661" parent="547" name="password">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(128)|0s</StoredType>
+    </column>
+    <column id="662" parent="547" name="last_login">
+      <Position>3</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="663" parent="547" name="is_superuser">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="664" parent="547" name="username">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="665" parent="547" name="first_name">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="666" parent="547" name="last_name">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>varchar(150)|0s</StoredType>
+    </column>
+    <column id="667" parent="547" name="email">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>varchar(254)|0s</StoredType>
+    </column>
+    <column id="668" parent="547" name="is_staff">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="669" parent="547" name="is_active">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="670" parent="547" name="date_joined">
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>datetime(6)|0s</StoredType>
+    </column>
+    <column id="671" parent="547" name="phone_number">
+      <Position>12</Position>
+      <StoredType>varchar(15)|0s</StoredType>
+    </column>
+    <index id="672" parent="547" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="673" parent="547" name="username">
+      <ColNames>username</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="674" parent="547" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="675" parent="547" name="username">
+      <UnderlyingIndexName>username</UnderlyingIndexName>
+    </key>
+    <column id="676" parent="548" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint(20)|0s</StoredType>
+    </column>
+    <column id="677" parent="548" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint(20)|0s</StoredType>
+    </column>
+    <column id="678" parent="548" name="group_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <foreign-key id="679" parent="548" name="DjangoProjectexposer_user_id_1f4f3140_fk_DjangoPro">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>djangoprojectexposer_user</RefTableName>
+    </foreign-key>
+    <foreign-key id="680" parent="548" name="DjangoProjectexposer_group_id_91108d57_fk_auth_grou">
+      <ColNames>group_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_group</RefTableName>
+    </foreign-key>
+    <index id="681" parent="548" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="682" parent="548" name="DjangoProjectexposer_user_groups_user_id_group_id_0132a485_uniq">
+      <ColNames>user_id
+group_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="683" parent="548" name="DjangoProjectexposer_group_id_91108d57_fk_auth_grou">
+      <ColNames>group_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="684" parent="548" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="685" parent="548" name="DjangoProjectexposer_user_groups_user_id_group_id_0132a485_uniq">
+      <UnderlyingIndexName>DjangoProjectexposer_user_groups_user_id_group_id_0132a485_uniq</UnderlyingIndexName>
+    </key>
+    <column id="686" parent="549" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>bigint(20)|0s</StoredType>
+    </column>
+    <column id="687" parent="549" name="user_id">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>bigint(20)|0s</StoredType>
+    </column>
+    <column id="688" parent="549" name="permission_id">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <foreign-key id="689" parent="549" name="DjangoProjectexposer_user_id_b5c523f5_fk_DjangoPro">
+      <ColNames>user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>djangoprojectexposer_user</RefTableName>
+    </foreign-key>
+    <foreign-key id="690" parent="549" name="DjangoProjectexposer_permission_id_edd76a1e_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>auth_permission</RefTableName>
+    </foreign-key>
+    <index id="691" parent="549" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="692" parent="549" name="DjangoProjectexposer_use_user_id_permission_id_1b12e7b1_uniq">
+      <ColNames>user_id
+permission_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="693" parent="549" name="DjangoProjectexposer_permission_id_edd76a1e_fk_auth_perm">
+      <ColNames>permission_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="694" parent="549" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="695" parent="549" name="DjangoProjectexposer_use_user_id_permission_id_1b12e7b1_uniq">
+      <UnderlyingIndexName>DjangoProjectexposer_use_user_id_permission_id_1b12e7b1_uniq</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

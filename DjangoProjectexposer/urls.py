@@ -16,10 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from DjangoProjectexposer import settings
 from Mapping import views
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('form/',views.form),
-    path('map/',views.map),
+    path('', views.Home),
+    path('login/', views.create_user),
+    path('form/', views.form),
+    path('map/', views.map),
+    path('client/', views.client),
+    path('client/<int:id_client>/', views.client_details,name='client'),
+    path('adresse/<int:id_client>/', views.Adresse_Choice, name='ajouter_adresse'),
+
 ]
+
+if settings.DEBUG:  # Servir les fichiers médias seulement en développement
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
