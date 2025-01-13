@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if per %}
+        <div class="card mt-3 flex-1">
+            <table class="container table mt-5">
+                <thead>
+                <tr>
+                    <th scope="col">id_client</th>
+                    <th scope="col">nom</th>
+                    <th scope="col">prenom</th>
+                    <th scope="col">Adresse</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for cl in per %}
+                    <tr class="table-active">
+                        <th scope="row">{{ cl.id_client }}</th>
+                        <td>
+                            <a href="/client/{{ cl.id_client }}" class="btn btn-link text-decoration-none">
+                                {{ cl.nom }}
+                            </a>
+                        </td>
+                        <td>{{ cl.prenom }}</td>
+                        <td>
+                            {% if cl.adresses %}
+                                {% for address in cl.adresses %}
+                                    <div>
+                                        {{ address.num_rue }} {{ address.nom_rue }}, {{ address.city }}, {{ address.state }}
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <div>Aucune adresse disponible</div>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="/client/{{ cl.id_client }}" class="btn btn-danger text-decoration-none">
+                                <b>Supprimer</b>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/client/{{ cl.id_client }}" class="btn btn-primary text-decoration-none">
+                                <b>Modifier</b>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p>Aucun client trouvé.</p>
+    {% endif %}
+{% endblock %}
