@@ -26,10 +26,11 @@ urlpatterns = [
     path('login/', views.create_user),
     path('form/', views.form),
     path('map/', views.map),
-    path('client/', views.client),
+    path('client/', views.client,name='list_client'),
     path('client/<int:id_client>/', views.client_details,name='client'),
     path('adresse/<int:id_client>/', views.Adresse_Choice, name='ajouter_adresse'),
-
+    path('client/delete/<int:id_client>/', views.supprimer_client, name='supprimer_client'),
+    path('client/modifier/<int:id_client>/', views.modifier_client, name='modifier_client'),
 ]
 
 if settings.DEBUG:  # Servir les fichiers médias seulement en développement

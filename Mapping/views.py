@@ -56,9 +56,9 @@ def client(request):
 
 
 def client_details(request, id_client):
-    clients_details = get_object_or_404(Client, id_client=id_client)
+    clients = get_object_or_404(Client, id_client=id_client)
     # Vous n'avez pas besoin d'ajouter manuellement les adresses
-    return render(request, 'Client_details.html', {'details': clients_details})
+    return render(request, 'Client_details.html', {'details': clients})
 
 
 def create_user(request):
@@ -74,3 +74,30 @@ def create_user(request):
 
 def Home(request):
     return render(request, 'Home.html')
+
+
+def supprimer_client(request, id_client):
+    client = get_object_or_404(Client, id_client=id_client)
+    if request.method == 'POST':
+        # Vérifie si le bouton "supprimer" a été activé
+        if "supprimer" in request.POST:
+            client.delete()
+            return redirect('list_client')
+            # Affiche une page de confirmation pour la suppression
+    return render(request, 'supprimer_client.html', {'details': client})
+
+
+def modifier_client(request, id_client):
+    client = get_object_or_404(Client, id_client=id_client)
+    if request.method == 'POST':
+        # Récupère les nouvelles données soumises dans le formulaire
+        client.nom = request.POST.get('nom', client.nom)
+        client.prenom = request.POST.get('prenom', client.prenom)
+        client.email = request.POST.get('email', client.email)
+
+        # Sauvegarde les modifications dans la base de données
+        client.save()
+        return redirect('list_client')  # Redirige vers la liste des clients après la modification
+
+    # Affiche la page avec les informations actuelles du client
+    return render(request, 'modifier_client.html', {'details': client})
