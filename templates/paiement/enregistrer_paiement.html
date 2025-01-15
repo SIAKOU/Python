@@ -51,8 +51,12 @@
                 <label for="montant_total" class="form-label">Montant total:</label>
                 <span id="montant_total">0.00</span> FCFA
             </div>
+            <input type="hidden" name="montant_total" id="montant_total_input" value="0.00"
+                   oninput="this.value = parseFloat(document.getElementById('montant_total').textContent.trim()) || 0;"/>
 
             <button type="submit" class="btn btn-primary" onclick="showPaymentMessage()"> PAYER</button>
         </form>
+
+
     </div>
 {% endblock %}

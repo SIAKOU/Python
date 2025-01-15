@@ -20,26 +20,30 @@ def enregister_paiement(request):
     if request.method == 'POST':
         try:
             client_id = request.POST['client']
-            client = Client.objects.get(id=client_id)  # Corrected: Fetch client by ID
+            client = Client.objects.get(id_client=client_id)  # Corrected: Fetch client by ID
             marchandises_data = request.POST.getlist('marchandise')
             montant_total = request.POST['montant_total']
 
-            # Process selected merchandise items
+            # Process selected merchandise items and prepare JSON data
             marchandises = []
             for marchandise_id in marchandises_data:
                 marchandise = Marchandise.objects.get(numero_marchandise=marchandise_id)  # Fetch marchandise object
-                marchandises.append(marchandise)  # Append the marchandise object
+                marchandises.append({
+                    'numero_marchandise': marchandise.numero_marchandise,
+                    'nom': marchandise.nom,
+                    'description': marchandise.description,
+                    'prix': marchandise.prix
+                })
 
             paiement = Paiement(
                 est_valide=True,
                 client=client,
+                marchandises=marchandises,  # Save as JSON
                 montant_total=montant_total,
                 date_paiement=timezone.now(),
                 token=uuid.uuid4()
             )
             paiement.save()
-            for marchandise in marchandises:  # Add marchandises using ManyToMany relationship
-                paiement.marchandises.add(marchandise)
 
             return render(request, 'paiement/enregistrer_paiement.html', {
                 'clients': Client.objects.all(),
