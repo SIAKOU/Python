@@ -4,15 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="Add payment feature with templates and dynamic updates&#10;&#10;Implemented functionalities for managing payments, including views, templates, scripts, and styles. Updated navigation for new payment routes and integrated the feature with existing client and merchandise data.">
+    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="Add new models and configs for migrations and images  &#10;&#10;Introduced `Marchandise` and `Paiement` models via a new Django migration file to support additional functionalities. Added new image files and an XML configuration likely for IDE data sources. These changes prepare the project for further feature expansion and collaboration setup.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paiement/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/paiement/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/enregistrer_paiement.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/enregistrer_paiement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/paiement/li_payements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/li_payements.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -154,7 +156,7 @@
       <workItem from="1736921714509" duration="3855000" />
       <workItem from="1736933796752" duration="4565000" />
       <workItem from="1736952332414" duration="1244000" />
-      <workItem from="1736964233021" duration="9082000" />
+      <workItem from="1736964233021" duration="9439000" />
     </task>
     <task id="LOCAL-00001" summary="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability.">
       <option name="closed" value="true" />
@@ -188,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736970434627</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add new models and configs for migrations and images  &#10;&#10;Introduced `Marchandise` and `Paiement` models via a new Django migration file to support additional functionalities. Added new image files and an XML configuration likely for IDE data sources. These changes prepare the project for further feature expansion and collaboration setup.">
+      <option name="closed" value="true" />
+      <created>1736975705986</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736975705986</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +209,7 @@
     <MESSAGE value="Delete outdated data source files and update image paths.&#10;&#10;Removed obsolete database data source files to clean up the project. Updated the structure by renaming `assest_globe` image files and moving them to the `mapping` directory for better organization. These changes improve project maintainability and clarify file usage." />
     <MESSAGE value="Update collation mappings in data source configuration&#10;&#10;Revised collation names and default charset settings in the XML to reflect updated configurations. Adjustments ensure accurate collation name usage and proper charset defaults for various encodings." />
     <MESSAGE value="Add payment feature with templates and dynamic updates&#10;&#10;Implemented functionalities for managing payments, including views, templates, scripts, and styles. Updated navigation for new payment routes and integrated the feature with existing client and merchandise data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add payment feature with templates and dynamic updates&#10;&#10;Implemented functionalities for managing payments, including views, templates, scripts, and styles. Updated navigation for new payment routes and integrated the feature with existing client and merchandise data." />
+    <MESSAGE value="Add new models and configs for migrations and images  &#10;&#10;Introduced `Marchandise` and `Paiement` models via a new Django migration file to support additional functionalities. Added new image files and an XML configuration likely for IDE data sources. These changes prepare the project for further feature expansion and collaboration setup." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new models and configs for migrations and images  &#10;&#10;Introduced `Marchandise` and `Paiement` models via a new Django migration file to support additional functionalities. Added new image files and an XML configuration likely for IDE data sources. These changes prepare the project for further feature expansion and collaboration setup." />
   </component>
 </project>

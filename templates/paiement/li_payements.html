@@ -8,24 +8,6 @@
     <link rel="stylesheet" href="{% static 'paiement/styles/paiements_invalides_style.css' %}">
     <link rel="stylesheet" href="{% static 'paiement/styles/style_li__paiement.css' %}">
     <title>Liste des Paiements</title>
-    
-    <style>
-        .btn3 {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            
-        }
-        .btn3 a {
-            width: auto;
-            padding: 10px 20px;    background-color: #dc3545;
-        }
-
-        .btn3 a:hover {
-            background-color: #c82333;
-        }
-    </style>
 </head>
 <body>
 <h1>Liste des Paiements</h1>
@@ -46,8 +28,8 @@
             <td>{{ paiement.date_paiement }}</td>
             <td>
                 <ul>
-                    {% for marchandise in paiement.marchandises.marchandises %}
-                        <li>{{ marchandise }}</li>
+                    {% for marchandise in paiement.marchandises %}
+                        <li>{{ marchandise.nom }}</li>
                     {% endfor %}
                 </ul>
             </td>
@@ -59,11 +41,5 @@
     {% endfor %}
     </tbody>
 </table>
-
-<div class="btn3">
-    <a href="/paiement/invalides/" class="btn btn-danger" style="text-decoration:none;text-align:center;color:white;border-radius:5px;">
-        VOIR LA LISTE DES PAIEMENTS INVALIDES
-    </a>
-</div>
 </body>
 </html>
