@@ -4,34 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability.">
+    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="Delete outdated data source files and update image paths.&#10;&#10;Removed obsolete database data source files to clean up the project. Updated the structure by renaming `assest_globe` image files and moving them to the `mapping` directory for better organization. These changes improve project maintainability and clarify file usage.">
+      <change afterPath="$PROJECT_DIR$/paiement/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/paiement/enregistrer_paiement.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/paiement/li_paiements_invalides.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/paiement/li_payements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9d782eb3-5e51-4cfe-8d0a-dfea7edcf9ba.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9d782eb3-5e51-4cfe-8d0a-dfea7edcf9ba.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mapping/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/JS/globe.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/JS/globe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/JS/mapping.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/JS/mapping.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/JS/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/JS/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assest_globe/New-global-view.max-1000x1000.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/assest_globe/New-global-view.max-1000x1000.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assest_globe/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/assest_globe/img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assest_globe/marten-bjork-V5jxkMKxv_0-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/assest_globe/marten-bjork-V5jxkMKxv_0-unsplash.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assest_globe/sam-andreatta-30Dm5nnL9Zk-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/assest_globe/sam-andreatta-30Dm5nnL9Zk-unsplash.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/Globe.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/css/Globe.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/css/nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Adresse_Choice.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/Adresse_Choice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Client_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/Client_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Client_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/Client_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base-map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/create_users.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/create_users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/globa_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/globa_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/localisation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/localisation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modifier_client.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/modifier_client.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/supprimer_client.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/supprimer_client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paiement/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/paiement/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/paiement/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mapping/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mapping/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/mapping/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/map.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +46,19 @@
     &quot;assignee&quot;: &quot;Mrjojono&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Mrjojono/PythonPorject.git",
-    "accountId": "c5013a15-cf51-469b-a401-2baa54e8a91b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Mrjojono/PythonPorject.git&quot;,
+    &quot;accountId&quot;: &quot;c5013a15-cf51-469b-a401-2baa54e8a91b&quot;
   }
-}]]></component>
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DjangoProjectexposer/models.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/DjangoProjectexposer/settings.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -83,12 +78,14 @@
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/logos/Desktop/PythonPorject/paiement",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -98,6 +95,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\logos\Desktop\PythonPorject\paiement" />
+      <recent name="C:\Users\logos\Desktop\PythonPorject\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\joan\PycharmProjects\DjangoProjectexposer\static" />
       <recent name="C:\Users\joan\PycharmProjects\DjangoProjectexposer\media\images" />
@@ -164,6 +165,7 @@
       <workItem from="1736921714509" duration="3855000" />
       <workItem from="1736933796752" duration="4565000" />
       <workItem from="1736952332414" duration="1244000" />
+      <workItem from="1736964233021" duration="1847000" />
     </task>
     <task id="LOCAL-00001" summary="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability.">
       <option name="closed" value="true" />
@@ -173,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736953415802</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Delete outdated data source files and update image paths.&#10;&#10;Removed obsolete database data source files to clean up the project. Updated the structure by renaming `assest_globe` image files and moving them to the `mapping` directory for better organization. These changes improve project maintainability and clarify file usage.">
+      <option name="closed" value="true" />
+      <created>1736964781411</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736964781411</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +191,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability." />
+    <MESSAGE value="Delete outdated data source files and update image paths.&#10;&#10;Removed obsolete database data source files to clean up the project. Updated the structure by renaming `assest_globe` image files and moving them to the `mapping` directory for better organization. These changes improve project maintainability and clarify file usage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete outdated data source files and update image paths.&#10;&#10;Removed obsolete database data source files to clean up the project. Updated the structure by renaming `assest_globe` image files and moving them to the `mapping` directory for better organization. These changes improve project maintainability and clarify file usage." />
   </component>
 </project>
