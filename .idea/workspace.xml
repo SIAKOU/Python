@@ -5,35 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/2_2_L4FDwSM.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Anna_Yanami_7y9Ly3p.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Anna_Yanami_QMLtbV6.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/Anna_Yanami_XxAjlco.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/JS/globe.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assest_globe/New-global-view.max-1000x1000.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assest_globe/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assest_globe/marten-bjork-V5jxkMKxv_0-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assest_globe/sam-andreatta-30Dm5nnL9Zk-unsplash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/Globe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/globa_base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modifier_client.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/supprimer_client.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/JS/mapping.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mapping/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/JS/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/JS/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/map.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Client_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Client_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Adresse_Choice.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Adresse_Choice.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Client_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Client_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/map.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +23,9 @@
       <list>
         <option value="Python Script" />
         <option value="Jupyter Notebook" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -75,30 +53,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.DjangoProjectexposer.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;configure/vue-to-display&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.DjangoProjectexposer.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
+    "git-widget-placeholder": "<unknown>",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\joan\PycharmProjects\DjangoProjectexposer\static" />
@@ -161,7 +139,9 @@
       <workItem from="1736697302016" duration="5032000" />
       <workItem from="1736703886061" duration="28805000" />
       <workItem from="1736764484150" duration="4960000" />
-      <workItem from="1736781818111" duration="29426000" />
+      <workItem from="1736781818111" duration="30219000" />
+      <workItem from="1736886811165" duration="5277000" />
+      <workItem from="1736921714509" duration="1140000" />
     </task>
     <servers />
   </component>

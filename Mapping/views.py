@@ -24,6 +24,9 @@ def form(request):
 def Adresse_Choice(request, id_client):
     client = get_object_or_404(Client, id_client=id_client)
     img = client.img_client
+    nom = client.nom
+    prenom = client.prenom
+
     if request.method == 'POST':
         num_rue = request.POST['num_rue']
         nom_rue = request.POST['nom_rue']
@@ -38,7 +41,7 @@ def Adresse_Choice(request, id_client):
         clients_details = Client.objects.get(id_client=id_client)
         adresse = new_Adresse
         return render(request, 'Client_details.html', {'details': clients_details, 'adresse': adresse})
-    return render(request, 'Adresse_Choice.html', {'img': img})
+    return render(request, 'Adresse_Choice.html', {'img': img,'nom':nom,'prenom':prenom})
 
 
 def map(request):

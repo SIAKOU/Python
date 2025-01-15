@@ -24,7 +24,6 @@ var popupContent = `
 marker.bindPopup(popupContent).openPopup();
 ///////////////////////////////////////////////////////
 
-
 // Gérer les clics pour déplacer le marqueur et ajouter une popup
 map.on('click', function (e) {
     var lat = e.latlng.lat;
