@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pythonProject',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'password',
         'HOST': 'localhost',  # ou l'adresse IP de votre serveur MySQL
         'PORT': '3306',  # Port par défaut de MySQL
     }

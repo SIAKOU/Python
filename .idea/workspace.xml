@@ -5,17 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/media/images/Anna_Yanami_OM2D2gz.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/_____oTvq0Xl.jpeg" afterPathEscaped="$PROJECT_DIR$/media/images/_𝒁𝒆𝒓𝒐_𝑻𝒘𝒐__𓂅_oTvq0Xl.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Client_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Client_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/globa_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/globa_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/2_2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/2_2_L4FDwSM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/2_2_nX2herM.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_6aYdp8E.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_7y9Ly3p.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_AKM8KJ1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_OM2D2gz.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_QMLtbV6.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_XxAjlco.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Character__Kuriyama_Mirai.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons_AhgaeOe.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons_CvYNawQ.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons_K3kQbPf.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons_N92Pwcl.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Screenshot_2024-12-26_211902.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Screenshot_2024-12-26_211902_3VdMz9a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Screenshot_2024-12-26_211902_JEMGKD8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/WhatsApp_Image_2024-12-17_at_22.11.49_3ef622b1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/Zero_Two_Wallpaper.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/____.jpeg" beforePathEscaped="$PROJECT_DIR$/media/images/_𝒁𝒆𝒓𝒐_𝑻𝒘𝒐__𓂅.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/_____P7Vbmc7.jpeg" beforePathEscaped="$PROJECT_DIR$/media/images/_𝒁𝒆𝒓𝒐_𝑻𝒘𝒐__𓂅_P7Vbmc7.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/_____WaabDHP.jpeg" beforePathEscaped="$PROJECT_DIR$/media/images/_𝒁𝒆𝒓𝒐_𝑻𝒘𝒐__𓂅_WaabDHP.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/_____oTvq0Xl.jpeg" beforePathEscaped="$PROJECT_DIR$/media/images/_𝒁𝒆𝒓𝒐_𝑻𝒘𝒐__𓂅_oTvq0Xl.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/darling.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/darling_I9lmFEB.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/darling_On8klMT.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/darling_Yzu8VAE.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/darling_dLe5kbt.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/darling_tUJ6U0x.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +70,12 @@
     &quot;assignee&quot;: &quot;Mrjojono&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Mrjojono/PythonPorject.git&quot;,
-    &quot;accountId&quot;: &quot;088b5a83-e0ea-4879-a429-2e212efdb518&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Mrjojono/PythonPorject.git",
+    "accountId": "c5013a15-cf51-469b-a401-2baa54e8a91b"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -66,7 +94,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "finish/5000",
+    "git-widget-placeholder": "main",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -147,6 +175,7 @@
       <workItem from="1736886811165" duration="5277000" />
       <workItem from="1736921714509" duration="3855000" />
       <workItem from="1736933796752" duration="4565000" />
+      <workItem from="1736952332414" duration="654000" />
     </task>
     <servers />
   </component>
