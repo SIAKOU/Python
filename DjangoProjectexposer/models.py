@@ -1,5 +1,8 @@
+import uuid
+
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from jsonfield import JSONField
 
 
 class Client(models.Model):
@@ -31,3 +34,20 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
+
+
+class Marchandise(models.Model):
+    numero_marchandise = models.AutoField(primary_key=True)
+    nom: str = models.CharField(max_length=50, null=False, unique=True)
+    description: str = models.TextField(max_length=100, blank=True, null=True)
+    prix: float = models.FloatField()
+
+
+class Paiement(models.Model):
+    numero_paiement = models.AutoField(primary_key=True)
+    client = models.ForeignKey(Client, on_delete=models.CASCADE)
+    marchandises = JSONField(default=dict)
+    montant_total: float = models.FloatField(default=0.00)
+    date_paiement = models.DateTimeField(auto_now_add=True)
+    est_valide: bool = models.BooleanField(default=False)
+    token = models.UUIDField(default=uuid.uuid4, editable=False)

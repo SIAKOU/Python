@@ -18,7 +18,7 @@ def form(request):
 
         img_dir = new_Client.img_client
         return redirect('ajouter_adresse', id_client=new_Client.id_client)
-    return render(request, 'form.html')
+    return render(request, 'mapping/form.html')
 
 
 def Adresse_Choice(request, id_client):
@@ -40,12 +40,12 @@ def Adresse_Choice(request, id_client):
         new_Adresse.save()
         clients_details = Client.objects.get(id_client=id_client)
         adresse = new_Adresse
-        return render(request, 'Client_details.html', {'details': clients_details, 'adresse': adresse})
-    return render(request, 'Adresse_Choice.html', {'img': img, 'nom': nom, 'prenom': prenom})
+        return render(request, 'mapping/Client_details.html', {'details': clients_details, 'adresse': adresse})
+    return render(request, 'mapping/Adresse_Choice.html', {'img': img, 'nom': nom, 'prenom': prenom})
 
 
 def map(request):
-    return render(request, 'map.html')
+    return render(request, 'mapping/map.html')
 
 
 def client(request):
@@ -55,13 +55,13 @@ def client(request):
     for client in clients:
         client.adresses = Adresse.objects.filter(id_client=client)
 
-    return render(request, 'Client_list.html', {'per': clients})
+    return render(request, 'mapping/Client_list.html', {'per': clients})
 
 
 def client_details(request, id_client):
     clients = get_object_or_404(Client, id_client=id_client)
     # Vous n'avez pas besoin d'ajouter manuellement les adresses
-    return render(request, 'Client_details.html', {'details': clients})
+    return render(request, 'mapping/Client_details.html', {'details': clients})
 
 
 def create_user(request):
@@ -72,11 +72,11 @@ def create_user(request):
             return redirect('login')
     else:
         form = UserCreateForm()
-    return render(request, 'create_users.html', {'form': form})
+    return render(request, 'mapping/create_users.html', {'form': form})
 
 
 def Home(request):
-    return render(request, 'Home.html')
+    return render(request, 'mapping/Home.html')
 
 
 def supprimer_client(request, id_client):
@@ -87,7 +87,7 @@ def supprimer_client(request, id_client):
             client.delete()
             return redirect('list_client')
             # Affiche une page de confirmation pour la suppression
-    return render(request, 'supprimer_client.html', {'details': client})
+    return render(request, 'mapping/supprimer_client.html', {'details': client})
 
 
 def modifier_client(request, id_client):
@@ -103,4 +103,4 @@ def modifier_client(request, id_client):
         return redirect('list_client')  # Redirige vers la liste des clients après la modification
 
     # Affiche la page avec les informations actuelles du client
-    return render(request, 'modifier_client.html', {'details': client})
+    return render(request, 'mapping/modifier_client.html', {'details': client})

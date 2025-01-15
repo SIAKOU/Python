@@ -4,46 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2_2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2_2_L4FDwSM.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/2_2_nX2herM.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_6aYdp8E.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_7y9Ly3p.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_AKM8KJ1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_OM2D2gz.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_QMLtbV6.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Anna_Yanami_XxAjlco.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Character__Kuriyama_Mirai.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons_AhgaeOe.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons_CvYNawQ.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons_K3kQbPf.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Naruto_girls_icons_N92Pwcl.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Screenshot_2024-12-26_211902.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Screenshot_2024-12-26_211902_3VdMz9a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Screenshot_2024-12-26_211902_JEMGKD8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/WhatsApp_Image_2024-12-17_at_22.11.49_3ef622b1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/Zero_Two_Wallpaper.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/____.jpeg" beforePathEscaped="$PROJECT_DIR$/media/images/_𝒁𝒆𝒓𝒐_𝑻𝒘𝒐__𓂅.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/_____P7Vbmc7.jpeg" beforePathEscaped="$PROJECT_DIR$/media/images/_𝒁𝒆𝒓𝒐_𝑻𝒘𝒐__𓂅_P7Vbmc7.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/_____WaabDHP.jpeg" beforePathEscaped="$PROJECT_DIR$/media/images/_𝒁𝒆𝒓𝒐_𝑻𝒘𝒐__𓂅_WaabDHP.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/_____oTvq0Xl.jpeg" beforePathEscaped="$PROJECT_DIR$/media/images/_𝒁𝒆𝒓𝒐_𝑻𝒘𝒐__𓂅_oTvq0Xl.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/darling.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/darling_I9lmFEB.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/darling_On8klMT.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/darling_Yzu8VAE.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/darling_dLe5kbt.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/darling_tUJ6U0x.jpeg" beforeDir="false" />
+    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability.">
+      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mapping/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mapping/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/JS/globe.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/JS/globe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/JS/mapping.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/JS/mapping.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/JS/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/JS/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assest_globe/New-global-view.max-1000x1000.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/assest_globe/New-global-view.max-1000x1000.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assest_globe/img.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/assest_globe/img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assest_globe/marten-bjork-V5jxkMKxv_0-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/assest_globe/marten-bjork-V5jxkMKxv_0-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assest_globe/sam-andreatta-30Dm5nnL9Zk-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/assest_globe/sam-andreatta-30Dm5nnL9Zk-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/Globe.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/css/Globe.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/map.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/css/map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/css/nav.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/mapping/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Adresse_Choice.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/Adresse_Choice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Client_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/Client_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Client_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/Client_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/Home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base-map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base-map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/create_users.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/create_users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/globa_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/globa_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/localisation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/localisation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/modifier_client.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/modifier_client.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/supprimer_client.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/supprimer_client.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,11 +163,24 @@
       <workItem from="1736886811165" duration="5277000" />
       <workItem from="1736921714509" duration="3855000" />
       <workItem from="1736933796752" duration="4565000" />
-      <workItem from="1736952332414" duration="654000" />
+      <workItem from="1736952332414" duration="1244000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability.">
+      <option name="closed" value="true" />
+      <created>1736953415802</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1736953415802</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability." />
   </component>
 </project>

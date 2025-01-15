@@ -1,4 +1,4 @@
-{% extends './base.html' %}
+{% extends './mapping/base.html' %}
 
 {% block content %}
     <div class="container-fluid d-flex flex-column bg-body-secondary flex-lg-row mt-5 mb-5 gap-4 h-auto"
@@ -14,21 +14,22 @@
                          width="300px" style="height: 100%; width: 100%; border-radius: 50%; object-fit: cover;">
                 </div>
 
-                <input class="form-control mt-2" id="nom" type="text" readonly value={{ details.nom }}>
-                <input class="form-control" type="text" id="prenom" readonly value={{ details.prenom }}>
+                <input class="form-control mt-2" id="nom" type="text" name="nom" value={{ details.nom }}>
+                <input class="form-control" type="text" id="prenom" name="prenom" value={{ details.prenom }}>
+                <input class="form-control" type="text" id="email" name="email" value={{ details.email }}>
 
                 {% for adresses in details.adresse.all %}
                     <input class="form-control" readonly
                            value="{{ adresses.num_rue }}, {{ adresses.nom_rue }} {{ adresses.city }} {{ adresses.state }} {{ adresses.state }}">
                     <label class="form-label"><span class="text-body-emphasis"></span>
-                        <input class="form-control mt-2" id="longitude" type="text"
+                        <input class="form-control mt-2" id="longitude" type="text" name="longitude"
                                value="{{ adresses.longitude }}">
-                        <input class="form-control mt-3" id="latitude" type="text" value="{{ adresses.latitude }}">
+                        <input class="form-control mt-3" id="latitude" name="latitude" type="text"
+                               value="{{ adresses.latitude }}">
                     </label>
                 {% endfor %}
-                <div class="d-flex flex-row justify-content-between">
-                    <button type="button" class="btn btn-primary">Update</button>
-                    <button type="submit" class="btn btn-danger" name="supprimer">Delete</button>
+                <div class="d-flex flex-row justify-content-lg-center">
+                    <button type="submit" class="btn btn-primary" name="modifier">Update</button>
                 </div>
             </form>
         </div>

@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
           crossorigin=""/>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/map.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mapping/css/map.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mapping/css/nav.css' %}">
     <style>
         li {
             font-family: Arial, sans-serif;
@@ -39,7 +39,7 @@
 <nav class=" navbar navbar-expand-lg navbar-primary  justify-content-center"
      style="background-color: rgba(131,187,231,0.65); opacity: 5;">
     <div class="container-lg">
-        <a class="navbar-brand" href="/">GeoMAP</a>
+        <a class="navbar-brand" href="/static">GeoMAP</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href=" /"><i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/static"><i class="fa fa-home"></i>Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/map"><i class="fa fa-map"></i>Map</a>
@@ -75,7 +75,7 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="{% static 'JS/mapping.js' %}"></script>
+<script src="{% static 'mapping/JS/mapping.js' %}"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
