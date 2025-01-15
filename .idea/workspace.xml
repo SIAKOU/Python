@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="Remove unused styles and refine payment list template.&#10;&#10;Eliminated redundant inline styles and adjusted the loop rendering for `marchandises` to access `nom`. These changes improve template clarity, maintainability, and adherence to best practices.">
-      <change afterPath="$PROJECT_DIR$/templates/paiement/base_liste_paiements.html" afterDir="false" />
+    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="Refactor payment templates to use a base structure.&#10;&#10;Updated `li_payements.html` to extend a new `base_liste_paiements.html` template for better reusability and maintainability. Integrated Bootstrap and external resources for enhanced styling and functionality, replacing outdated static assets.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/paiement/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/paiement/scripts/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mapping/base-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mapping/base-map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base-map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mapping/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mapping/globa_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/globa_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/base_enregistrer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/base_enregistrer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/enregistrer_paiement.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/enregistrer_paiement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/paiement/li_payements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/li_payements.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,32 +58,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.DjangoProjectexposer.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/logos/Desktop/PythonPorject/static",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.DjangoProjectexposer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/logos/Desktop/PythonPorject/static&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\logos\Desktop\PythonPorject\static" />
@@ -163,7 +156,7 @@
       <workItem from="1736921714509" duration="3855000" />
       <workItem from="1736933796752" duration="4565000" />
       <workItem from="1736952332414" duration="1244000" />
-      <workItem from="1736964233021" duration="11595000" />
+      <workItem from="1736964233021" duration="16507000" />
     </task>
     <task id="LOCAL-00001" summary="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability.">
       <option name="closed" value="true" />
@@ -213,7 +206,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736976049292</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update payment handling and navigation links&#10;&#10;Replaced `textContent` with `innerText` for compatibility and updated hidden input management in payment scripts. Adjusted templates to dynamically link navigation to Django's URL resolver, improving maintainability. Introduced a new payment list template with enhanced styles for better user experience.">
+      <option name="closed" value="true" />
+      <created>1736978205039</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736978205039</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Refactor payment templates to use a base structure.&#10;&#10;Updated `li_payements.html` to extend a new `base_liste_paiements.html` template for better reusability and maintainability. Integrated Bootstrap and external resources for enhanced styling and functionality, replacing outdated static assets.">
+      <option name="closed" value="true" />
+      <created>1736983229283</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736983229283</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +235,8 @@
     <MESSAGE value="Add payment feature with templates and dynamic updates&#10;&#10;Implemented functionalities for managing payments, including views, templates, scripts, and styles. Updated navigation for new payment routes and integrated the feature with existing client and merchandise data." />
     <MESSAGE value="Add new models and configs for migrations and images  &#10;&#10;Introduced `Marchandise` and `Paiement` models via a new Django migration file to support additional functionalities. Added new image files and an XML configuration likely for IDE data sources. These changes prepare the project for further feature expansion and collaboration setup." />
     <MESSAGE value="Remove unused styles and refine payment list template.&#10;&#10;Eliminated redundant inline styles and adjusted the loop rendering for `marchandises` to access `nom`. These changes improve template clarity, maintainability, and adherence to best practices." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unused styles and refine payment list template.&#10;&#10;Eliminated redundant inline styles and adjusted the loop rendering for `marchandises` to access `nom`. These changes improve template clarity, maintainability, and adherence to best practices." />
+    <MESSAGE value="Update payment handling and navigation links&#10;&#10;Replaced `textContent` with `innerText` for compatibility and updated hidden input management in payment scripts. Adjusted templates to dynamically link navigation to Django's URL resolver, improving maintainability. Introduced a new payment list template with enhanced styles for better user experience." />
+    <MESSAGE value="Refactor payment templates to use a base structure.&#10;&#10;Updated `li_payements.html` to extend a new `base_liste_paiements.html` template for better reusability and maintainability. Integrated Bootstrap and external resources for enhanced styling and functionality, replacing outdated static assets." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor payment templates to use a base structure.&#10;&#10;Updated `li_payements.html` to extend a new `base_liste_paiements.html` template for better reusability and maintainability. Integrated Bootstrap and external resources for enhanced styling and functionality, replacing outdated static assets." />
   </component>
 </project>

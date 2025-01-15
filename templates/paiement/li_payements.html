@@ -4,31 +4,27 @@
     <div class=" container card text-center mt-5">
         <h1>Listes des paiements</h1>
     </div>
-
-    <div class="card container mt-3 mb-5 flex-1"
-         style="background: #080126; box-shadow: 10px 10px 10px rgba(34,36,38,0.7)">
-        <table class="container table mt-5">
-            <thead>
-            <tr>
-                <th scope="col">Client</th>
-                <th scope="col">Montant</th>
-                <th scope="col">Date paiement</th>
-                <th scope="col">Marchandise</th>
-                {#                    <th scope="col">Actions</th>#}
-                {#                    <th scope="col"></th>#}
-            </tr>
-            </thead>
-            <tbody>
-            {% for paiement in paiements %}
+    {% for paiement in paiements %}
+        <div class="card container mt-3 mb-5 flex-1"
+             style="background: #080126; box-shadow: 10px 10px 10px rgba(34,36,38,0.7)">
+            <table class="container table mt-5">
+                <thead>
+                <tr>
+                    <th scope="col">Client</th>
+                    <th scope="col">Montant</th>
+                    <th scope="col">Date paiement</th>
+                    <th scope="col">Marchandise</th>
+                </tr>
+                </thead>
+                <tbody>
                 <tr class="table-active">
-                    {#                    <th scope="row">{{ paiement.client.nom }} {{ paiement.client.prenom }}</th>#}
                     <td>
                         <a href="/client/{{ paiement.client.id_client }}" class="btn btn-link text-decoration-none">
                             {{ paiement.client.nom }} {{ paiement.client.prenom }}
                         </a>
                     </td>
-                    <td>{{ paiement.montant_total }}</td>#}
-                <td>{{ paiement.date_paiement }}</td>
+                    <td>{{ paiement.montant_total }}</td>
+                    <td>{{ paiement.date_paiement }}</td>
                     <td>
                         <ul>
                             {% for marchandise in paiement.marchandises %}
@@ -37,12 +33,12 @@
                         </ul>
                     </td>
                 </tr>
-            {% empty %}
-                <p>Aucun client trouvé.</p>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
+    {% empty %}
+        <p>Aucun client trouvé.</p>
+    {% endfor %}
 {% endblock %}
 
 
