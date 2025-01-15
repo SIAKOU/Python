@@ -1,40 +1,6 @@
-{#{% extends './base.html' %}#}
-{##}
-{#{% block content %}#}
-{#    <div class="container-fluid d-flex flex-column bg-body-secondary flex-lg-row mt-5 gap-4 h-auto">#}
-        {#        <div class="border-2 border-black col-12 col-lg-3 p-3">#}
-        {# Partie concernant les infos sur le client #}
-        {#            <form class="form-group d-flex flex-column gap-3">#}
-        {#                <div class="form-control d-flex justify-content-center align-items-center"#}
-        {#                     style="height: 200px; width: 200px; border-radius: 50%; overflow: hidden; margin-left: 20%">#}
-        {#                    <img src="" alt="image indispensable" class="img-fluid"#}
-        {#                         style="height: 100%; width: 100%; object-fit: cover; ">#}
-        {#                </div>#}
-        {#                <input class="form-control mt-2" type="text" readonly value="nom">#}
-        {#                <input class="form-control" type="text" readonly value="prénom">#}
-        {#                <input class="form-control" type="text" readonly value="Adresse">#}
-        {#                <textarea class="form-control" readonly>Description</textarea>#}
-        {#                <input type="file" accept="/image/jpeg">#}
-        {##}
-        {##}
-        {#                <label class="form-label"><span class="text-body-emphasis">Modifier manuellement:</span>#}
-        {#                    <input class="form-control mt-2" type="text" placeholder="Longitude">#}
-        {#                    <input class="form-control mt-3" type="text" placeholder="Latitude">#}
-        {#                </label>#}
-        {#                <div class="d-flex flex-row justify-content-between">#}
-        {#                    <button type="button" class="btn btn-primary">Update</button>#}
-        {#                    <button type="button" class="btn btn-danger">Delete</button>#}
-        {#                </div>#}
-        {#            </form>#}
-        {#        </div>#}
-{#        <div class="carte ">#}
-{#            <div id="map"></div>#}
-{#        </div>#}
-{#    </div>#}
-{#{% endblock %}#}
-{% extends './base.html' %}
-
+{% extends './base-map.html' %}
 {% block content %}
+    
     <div class="container d-flex flex-column bg-body-secondary mt-5 mb-5 gap-4 h-auto">
         <div class="carte">
             <div id="map" style="height: 100vh; width: 100%;"></div>

@@ -24,8 +24,8 @@
         <option value="Python Script" />
         <option value="Jupyter Notebook" />
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -141,7 +141,7 @@
       <workItem from="1736764484150" duration="4960000" />
       <workItem from="1736781818111" duration="30219000" />
       <workItem from="1736886811165" duration="5277000" />
-      <workItem from="1736921714509" duration="1140000" />
+      <workItem from="1736921714509" duration="3387000" />
     </task>
     <servers />
   </component>

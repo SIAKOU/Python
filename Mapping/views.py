@@ -41,7 +41,7 @@ def Adresse_Choice(request, id_client):
         clients_details = Client.objects.get(id_client=id_client)
         adresse = new_Adresse
         return render(request, 'Client_details.html', {'details': clients_details, 'adresse': adresse})
-    return render(request, 'Adresse_Choice.html', {'img': img,'nom':nom,'prenom':prenom})
+    return render(request, 'Adresse_Choice.html', {'img': img, 'nom': nom, 'prenom': prenom})
 
 
 def map(request):
