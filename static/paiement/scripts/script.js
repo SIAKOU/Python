@@ -10,7 +10,7 @@ function updateMontantTotal() {
         }
     });
 
-    document.getElementById('montant_total').textContent = total.toFixed(2);
+    document.getElementById('montant_total').innerText = total.toFixed(2);
 }
 
 window.addEventListener('load', updateMontantTotal);
@@ -20,3 +20,7 @@ function showPaymentMessage() {
     messageDiv.textContent = "Le paiement a été effectué avec succès !";
     messageDiv.style.display = 'block';
 }
+//
+// document.getElementById('montant_total').addEventListener('DOMSubtreeModified', function () {
+//     document.getElementById('montant_total_input').value = parseFloat(this.textContent.trim()) || 0;
+// });

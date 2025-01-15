@@ -51,8 +51,32 @@
                 <label for="montant_total" class="form-label">Montant total:</label>
                 <span id="montant_total">0.00</span> FCFA
             </div>
-            <input type="hidden" name="montant_total" id="montant_total_input" value="0.00"
-                   oninput="this.value = parseFloat(document.getElementById('montant_total').textContent.trim()) || 0;"/>
+
+
+            <input type="hidden" id="hidden_montant_total" name="montant_total" value="0.00">
+
+            <script>
+                function updateHiddenInput() {
+                    const montantSpan = document.getElementById('montant_total');
+                    const hiddenInput = document.getElementById('hidden_montant_total');
+                    hiddenInput.value = montantSpan.textContent;
+                }
+
+                // Call updateHiddenInput whenever the total amount is updated
+                function updateMontantTotal() {
+                    let total = 0;
+
+                    const checkboxes = document.querySelectorAll('#marchandises-list .form-check-input:checked');
+                    checkboxes.forEach(checkbox => {
+                        total += parseFloat(checkbox.getAttribute('data-prix') || 0);
+                    });
+
+                    const montantSpan = document.getElementById('montant_total');
+                    montantSpan.textContent = total.toFixed(2);
+
+                    updateHiddenInput();
+                }
+            </script>
 
             <button type="submit" class="btn btn-primary" onclick="showPaymentMessage()"> PAYER</button>
         </form>
