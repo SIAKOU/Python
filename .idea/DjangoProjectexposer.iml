@@ -23,6 +23,8 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="all" level="application" />
     <orderEntry type="library" name="leaflet" level="application" />
+    <orderEntry type="library" name="three.js" level="application" />
+    <orderEntry type="library" name="three-globe" level="application" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

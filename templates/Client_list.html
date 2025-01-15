@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class=" container card text-center mt-5">
+        <h1>Listes des clients</h1>
+    </div>
     {% if per %}
-        <div class="card mt-3 flex-1">
+        <div class="card container mt-3 mb-5 flex-1"
+             style="background: #080126; box-shadow: 10px 10px 10px rgba(34,36,38,0.7)">
+            <a class="container mt-5 card btn btn-primary text-decoration-none" href="/form/"><b>Ajouter Clients</b></a>
             <table class="container table mt-5">
                 <thead>
                 <tr>
@@ -10,6 +15,8 @@
                     <th scope="col">nom</th>
                     <th scope="col">prenom</th>
                     <th scope="col">Adresse</th>
+                    <th scope="col">Actions</th>
+                    <th scope="col"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -34,14 +41,22 @@
                             {% endif %}
                         </td>
                         <td>
-                            <a href="/client/{{ cl.id_client }}" class="btn btn-danger text-decoration-none">
-                                <b>Supprimer</b>
-                            </a>
+                            <!-- Formulaire pour la suppression -->
+                            <form action="/client/delete/{{ cl.id_client }}/" method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger" name="delete"><i
+                                        class='fas fa-trash-alt'></i> Supprimer
+                                </button>
+                            </form>
                         </td>
                         <td>
-                            <a href="/client/{{ cl.id_client }}" class="btn btn-primary text-decoration-none">
-                                <b>Modifier</b>
-                            </a>
+                            <!-- Formulaire pour la suppression -->
+                            <form method="post" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-primary">
+                                    <a href="/client/modifier/{{ cl.id_client }}" class=" text-decoration-none "
+                                       style="color: white"> <i class='fas fa-edit'></i> Modifier</a></button>
+                            </form>
                         </td>
                     </tr>
                 {% endfor %}
