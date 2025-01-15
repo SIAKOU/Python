@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from DjangoProjectexposer import settings
 from Mapping import views
 from django.conf.urls.static import static
@@ -32,7 +32,7 @@ urlpatterns = [
     path('client/delete/<int:id_client>/', views.supprimer_client, name='supprimer_client'),
     path('client/modifier/<int:id_client>/', views.modifier_client, name='modifier_client'),
 
-    path()
+    path('paiement/', include('paiement.urls'))
 ]
 
 if settings.DEBUG:  # Servir les fichiers médias seulement en développement
