@@ -16,23 +16,33 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+
+import Mapping
+import paiement.views
 from DjangoProjectexposer import settings
 from Mapping import views
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Home,name='home'),
+    path('', views.Home, name='home'),
     path('login/', views.create_user),
-    path('form/', views.form,name='form'),
+    path('form/', views.form, name='form'),
     path('map/', views.map),
-    path('client/', views.client,name='list_client'),
-    path('client/<int:id_client>/', views.client_details,name='client'),
-    path('adresse/<int:id_client>/', views.Adresse_Choice, name='ajouter_adresse'),
-    path('client/delete/<int:id_client>/', views.supprimer_client, name='supprimer_client'),
-    path('client/modifier/<int:id_client>/', views.modifier_client, name='modifier_client'),
+    path('client/', views.client, name='list_client'),
+    path('client/<int:id_client>/', Mapping.views.client_details, name='client'),
+    path('adresse/<int:id_client>/', Mapping.views.Adresse_Choice, name='ajouter_adresse'),
+    path('client/delete/<int:id_client>/', Mapping.views.supprimer_client, name='supprimer_client'),
+    path('client/modifier/<int:id_client>/', Mapping.views.modifier_client, name='modifier_client'),
 
-    path('paiement/', include('paiement.urls'))
+    # path('paiement/', include('paiement.urls')),
+
+    path('paiement/enregistrer/', paiement.views.enregister_paiement, name='enregistrer_paiement'),
+    path('paiement/liste/', paiement.views.liste_paiements, name='listePaiements'),
+    path('paiement/invalides/', paiement.views.paiements_invalides, name='paiementsInvalides'),
+
+    path('paiement/delete/<int:id_paiement>/', paiement.views.supprimer_paiement, name='supprimer_paiement'),
+
 ]
 
 if settings.DEBUG:  # Servir les fichiers médias seulement en développement
