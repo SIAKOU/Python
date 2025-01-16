@@ -48,7 +48,8 @@ def enregister_paiement(request):
             return render(request, 'paiement/enregistrer_paiement.html', {
                 'clients': Client.objects.all(),
                 'marchandises': Marchandise.objects.all(),
-                'success_message': "Le paiement a été enregistré avec succès !"  # Success message
+                'success_message': "Le paiement a été enregistré avec succès !",  # Success message
+                'show_banner': True  # Show banner for 5 seconds
             })
 
         except Exception as e:
