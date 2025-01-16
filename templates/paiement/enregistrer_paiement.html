@@ -2,6 +2,17 @@
 
 {% block content %}
     <div class="container container-mt-5">
+        {% if show_banner %}
+            <div class="alert alert-success" role="alert" id="paiement-success-message">
+                {{ success_message }}
+            </div>
+            <script>
+                setTimeout(() => {
+                    const message = document.getElementById('paiement-success-message');
+                    if (message) message.style.display = 'none';
+                }, 7000);
+            </script>
+        {% endif %}
         <h1>Enregistrer un Paiement</h1>
         <form method="post" action="{% url 'enregistrer_paiement' %}">
             {% csrf_token %}
@@ -23,7 +34,7 @@
                                    value="{{ marchandise.numero_marchandise }}"
                                    data-prix="{{ marchandise.prix }}" onchange="updateMontantTotal()">
                             <label class="form-check-label" for="{{ marchandise.numero_marchandise }}">
-                                &nbsp; {{ marchandise.nom }} - {{ marchandise.prix }} FCFA
+                                &nbsp; {{ marchandise.nom }} - {{ marchandise.prix }} £
                             </label>
                         </div>
                     {% endfor %}
@@ -49,9 +60,8 @@
 
             <div class="mb-3">
                 <label for="montant_total" class="form-label">Montant total:</label>
-                <span id="montant_total">0.00</span> FCFA
+                <span id="montant_total">0.00</span> £
             </div>
-
 
             <input type="hidden" id="hidden_montant_total" name="montant_total" value="0.00">
 
@@ -80,7 +90,5 @@
 
             <button type="submit" class="btn btn-primary" onclick="showPaymentMessage()"> PAYER</button>
         </form>
-
-
     </div>
 {% endblock %}
