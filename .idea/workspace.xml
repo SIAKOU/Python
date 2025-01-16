@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="Add success banner and update currency to GBP&#10;&#10;Added a success message banner that disappears after 7 seconds upon payment completion. Updated displayed currency from FCFA to GBP across the template for consistency.">
+    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="add methodto render page to delete a paiement">
+      <change afterPath="$PROJECT_DIR$/templates/paiement/supprimer_paiement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DjangoProjectexposer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paiement/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/paiement/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/_Wallpaper_One_piece.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/jujutsu_kaisen_hd_png_by_newjer53_dekiqwv-350t-2x.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/paiement/enregistrer_paiement.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/enregistrer_paiement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/paiement/li_paiements_invalides.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/li_paiements_invalides.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/paiement/li_payements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/li_payements.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +52,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/DjangoProjectexposer/models.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/DjangoProjectexposer/settings.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/paiement/views.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
@@ -157,7 +164,7 @@
       <workItem from="1736921714509" duration="3855000" />
       <workItem from="1736933796752" duration="4565000" />
       <workItem from="1736952332414" duration="1244000" />
-      <workItem from="1736964233021" duration="22914000" />
+      <workItem from="1736964233021" duration="32770000" />
     </task>
     <task id="LOCAL-00001" summary="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability.">
       <option name="closed" value="true" />
@@ -287,7 +294,47 @@
       <option name="project" value="LOCAL" />
       <updated>1737010367490</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Reduce success message display duration and add banner flag&#10;&#10;Adjusted the success message timeout from 7 seconds to 3 seconds for improved user experience. Added a `show_banner` flag in the context to control banner visibility for better flexibility in rendering.">
+      <option name="closed" value="true" />
+      <created>1737010449005</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1737010449005</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add success banner and update currency to GBP&#10;&#10;Implemented a success message banner that dismisses after 7 seconds following successful payments. Changed the displayed currency from FCFA to GBP across templates for consistency. These updates enhance user feedback and align currency with project requirements.">
+      <option name="closed" value="true" />
+      <created>1737010464353</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1737010464353</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add .gitignore">
+      <option name="closed" value="true" />
+      <created>1737025945258</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1737025945258</updated>
+    </task>
+    <task id="LOCAL-00020" summary="modify project urls">
+      <option name="closed" value="true" />
+      <created>1737025974029</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1737025974029</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add methodto render page to delete a paiement">
+      <option name="closed" value="true" />
+      <created>1737026019069</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1737026019069</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,6 +357,12 @@
     <MESSAGE value="Standardize labels and improve UI formatting.&#10;&#10;Updated labels from &quot;Enregistrement&quot; to &quot;Enregistrer client&quot; for consistency across templates. Enhanced UI styles by modifying container margin-top and border-radius values. Minor whitespace and formatting adjustments were made for cleaner HTML and CSS code." />
     <MESSAGE value="Update README with project details and setup instructions.&#10;&#10;Added comprehensive project information, including features, technologies used, installation steps, and usage instructions. This enhances documentation clarity and provides a complete guide for users to interact with the project effectively." />
     <MESSAGE value="Add success banner and update currency to GBP&#10;&#10;Added a success message banner that disappears after 7 seconds upon payment completion. Updated displayed currency from FCFA to GBP across the template for consistency." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add success banner and update currency to GBP&#10;&#10;Added a success message banner that disappears after 7 seconds upon payment completion. Updated displayed currency from FCFA to GBP across the template for consistency." />
+    <MESSAGE value="Reduce success message display duration and add banner flag&#10;&#10;Adjusted the success message timeout from 7 seconds to 3 seconds for improved user experience. Added a `show_banner` flag in the context to control banner visibility for better flexibility in rendering." />
+    <MESSAGE value="Add success banner and update currency to GBP&#10;&#10;Implemented a success message banner that auto-hides after 7 seconds upon payment completion. Updated the displayed currency from FCFA to GBP across templates for consistency and improved user experience." />
+    <MESSAGE value="Add success banner and update currency to GBP&#10;&#10;Implemented a success message banner that dismisses after 7 seconds following successful payments. Changed the displayed currency from FCFA to GBP across templates for consistency. These updates enhance user feedback and align currency with project requirements." />
+    <MESSAGE value="add .gitignore" />
+    <MESSAGE value="modify project urls" />
+    <MESSAGE value="add methodto render page to delete a paiement" />
+    <option name="LAST_COMMIT_MESSAGE" value="add methodto render page to delete a paiement" />
   </component>
 </project>
