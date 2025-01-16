@@ -7,12 +7,12 @@ from DjangoProjectexposer.models import Client, Marchandise, Paiement
 
 
 def paiements_invalides(request):
-    invalid_paiements = Paiement.objects.filter(est_valide=False)
+    invalid_paiements = Paiement.objects.filter(est_valide=False).order_by('-date_paiement')
     return render(request, 'paiement/li_paiements_invalides.html', {'invalid_paiements': invalid_paiements})
 
 
 def liste_paiements(request):
-    paiements = Paiement.objects.select_related('client').all()
+    paiements = Paiement.objects.select_related('client').all().order_by('-date_paiement')
     return render(request, 'paiement/li_payements.html', {'paiements': paiements})
 
 
