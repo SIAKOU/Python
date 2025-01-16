@@ -14,6 +14,8 @@
                 <th scope="col">Date paiement</th>
                 <th scope="col">Marchandise</th>
                 <th scope="col">Statut</th>
+                <th scope="col"></th>
+
             </tr>
             </thead>
             <tbody>
@@ -36,6 +38,16 @@
                     <td>
                         <i class="fas fa-times-circle text-danger" title="Statut invalide"></i>
                     </td>
+                    <td>
+                        <!-- Formulaire pour la suppression -->
+                        <form action="/paiement/delete/{{ paiement.numero_paiement }}/" method="post"
+                              style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger" name="delete"><i
+                                    class='fas fa-trash-alt'></i> Annuler le paiement
+                            </button>
+                        </form>
+                    </td>
                 </tr>
             {% empty %}
                 <tr>
@@ -47,51 +59,3 @@
         </table>
     </div>
 {% endblock %}
-
-
-
-
-
-{#{% load static %}#}
-{##}
-{#<!DOCTYPE html>#}
-{#<html lang="en">#}
-{#<head>#}
-{#    <meta charset="UTF-8">#}
-{#    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>#}
-{#    <link rel="stylesheet" href="{% static 'paiement/styles/style_li__paiement.css' %}">#}
-{#    <title>Liste des Paiements Invalides</title></head>#}
-{#<body>#}
-{#<h1>Liste des Paiements Invalides</h1>#}
-{#<table>#}
-{#    <thead>#}
-{#    <tr>#}
-{#        <th>Client</th>#}
-{#        <th>Montant Total</th>#}
-{#        <th>Date de Paiement</th>#}
-{#        <th>Marchandises</th>#}
-{#    </tr>#}
-{#    </thead>#}
-{#    <tbody>#}
-{#    {% for paiement in invalid_paiements %}#}
-{#        <tr>#}
-{#            <td>{{ paiement.client.nom }} {{ paiement.client.prenom }}</td>#}
-{#            <td>{{ paiement.montant_total }}</td>#}
-{#            <td>{{ paiement.date_paiement }}</td>#}
-{#            <td>#}
-{#                <ul>#}
-{#                    {% for marchandise in paiement.marchandises.marchandises %}#}
-{#                        <li>{{ marchandise }}</li>#}
-{#                    {% endfor %}#}
-{#                </ul>#}
-{#            </td>#}
-{#        </tr>#}
-{#    {% empty %}#}
-{#        <tr>#}
-{#            <td colspan="4">Aucun paiement invalide trouvé.</td>#}
-{#        </tr>#}
-{#    {% endfor %}#}
-{#    </tbody>#}
-{#</table>#}
-{#</body>#}
-{#</html>#}

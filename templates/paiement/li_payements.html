@@ -14,13 +14,15 @@
                 <th scope="col">Montant</th>
                 <th scope="col">Date paiement</th>
                 <th scope="col">Marchandise</th>
+                <th scope="col">Statut</th>
+                <th scope="col"></th>
             </tr>
             </thead>
             <tbody>
             {% for paiement in paiements %}
                 <tr class="table-active">
                     <td>
-                        <a href="/client/{{ paiement.client.id_client }}" class="btn btn-link text-decoration-none">
+                        <a href="/client/{{ paiement.client.client }}" class="btn btn-link text-decoration-none">
                             {{ paiement.client.nom }} {{ paiement.client.prenom }}
                         </a>
                     </td>
@@ -33,10 +35,28 @@
                             {% endfor %}
                         </ul>
                     </td>
+                    <td>
+                        {% if paiement.est_valide %}
+                            <i class="fas fa-check-circle text-success"></i>
+                        {% else %}
+                            <i class="fas fa-times-circle text-danger"></i>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <!-- Formulaire pour la suppression -->
+                        <form action="/paiement/delete/{{ paiement.numero_paiement }}/" method="post"
+                              style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger" name="delete"><i
+                                    class='fas fa-trash-alt'></i> Annuler le paiement
+                            </button>
+                        </form>
+                    </td>
                 </tr>
             {% empty %}
                 <tr>
-                    <td colspan="5"><p style="text-align: center; color: black; font-size: 1.5rem; margin-top: 2rem;"> Aucun paiement n'été éffectué</p></td>
+                    <td colspan="5"><p style="text-align: center; color: black; font-size: 1.5rem; margin-top: 2rem;">
+                        Aucun paiement n'été éffectué</p></td>
                 </tr>
             {% endfor %}
 
