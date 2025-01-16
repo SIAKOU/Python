@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="Clean up commented-out code in payment template.&#10;&#10;Removed extensive obsolete commented code from the payment template file. This improves readability and maintains a cleaner codebase without impacting functionality.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paiement/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/paiement/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mapping/base-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mapping/base-map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base-map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mapping/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/mapping/globa_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/mapping/globa_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/base_enregistrer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/base_enregistrer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/base_liste_paiements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/base_liste_paiements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/base_paiements_invalides.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/paiement/li_paiements_invalides.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/li_paiements_invalides.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/li_payements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/li_payements.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +155,7 @@
       <workItem from="1736921714509" duration="3855000" />
       <workItem from="1736933796752" duration="4565000" />
       <workItem from="1736952332414" duration="1244000" />
-      <workItem from="1736964233021" duration="18677000" />
+      <workItem from="1736964233021" duration="19067000" />
     </task>
     <task id="LOCAL-00001" summary="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability.">
       <option name="closed" value="true" />
@@ -255,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736983713847</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Clean up commented-out code in payment template.&#10;&#10;Removed extensive obsolete commented code from the payment template file. This improves readability and maintains a cleaner codebase without impacting functionality.">
+      <option name="closed" value="true" />
+      <created>1736985865676</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1736985865677</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
