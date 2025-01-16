@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="add required textfields">
-      <change afterPath="$PROJECT_DIR$/templates/paiement/supprimer_paiement.html" afterDir="false" />
+    <list default="true" id="c1ebc07e-b537-48e9-a6f7-9acd5b679403" name="Changes" comment="workspace file">
       <change beforePath="$PROJECT_DIR$/DjangoProjectexposer/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/DjangoProjectexposer/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/media/images/_Wallpaper_One_piece.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/media/images/jujutsu_kaisen_hd_png_by_newjer53_dekiqwv-350t-2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/enregistrer_paiement.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/enregistrer_paiement.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/li_paiements_invalides.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/li_paiements_invalides.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/paiement/li_payements.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/paiement/li_payements.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +158,7 @@
       <workItem from="1736921714509" duration="3855000" />
       <workItem from="1736933796752" duration="4565000" />
       <workItem from="1736952332414" duration="1244000" />
-      <workItem from="1736964233021" duration="33170000" />
+      <workItem from="1736964233021" duration="33570000" />
     </task>
     <task id="LOCAL-00001" summary="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability.">
       <option name="closed" value="true" />
@@ -340,14 +336,45 @@
       <option name="project" value="LOCAL" />
       <updated>1737026545562</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="add required textfields">
+      <option name="closed" value="true" />
+      <created>1737026587158</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1737026587158</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Formulaire pour la suppression">
+      <option name="closed" value="true" />
+      <created>1737026618810</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1737026618810</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Formulaire pour la suppression">
+      <option name="closed" value="true" />
+      <created>1737026629755</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1737026629755</updated>
+    </task>
+    <task id="LOCAL-00026" summary="workspace file">
+      <option name="closed" value="true" />
+      <created>1737026643184</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1737026643184</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Remove unused files and update configuration.&#10;&#10;Deleted unnecessary media files, initial migration script, and outdated IDE configuration files. Updated database settings with a password and made minor formatting improvements in models.py. These changes enhance project cleanup and improve maintainability." />
     <MESSAGE value="Delete outdated data source files and update image paths.&#10;&#10;Removed obsolete database data source files to clean up the project. Updated the structure by renaming `assest_globe` image files and moving them to the `mapping` directory for better organization. These changes improve project maintainability and clarify file usage." />
     <MESSAGE value="Update collation mappings in data source configuration&#10;&#10;Revised collation names and default charset settings in the XML to reflect updated configurations. Adjustments ensure accurate collation name usage and proper charset defaults for various encodings." />
     <MESSAGE value="Add payment feature with templates and dynamic updates&#10;&#10;Implemented functionalities for managing payments, including views, templates, scripts, and styles. Updated navigation for new payment routes and integrated the feature with existing client and merchandise data." />
@@ -371,6 +398,8 @@
     <MESSAGE value="add methodto render page to delete a paiement" />
     <MESSAGE value="projet files" />
     <MESSAGE value="add required textfields" />
-    <option name="LAST_COMMIT_MESSAGE" value="add required textfields" />
+    <MESSAGE value="Formulaire pour la suppression" />
+    <MESSAGE value="workspace file" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace file" />
   </component>
 </project>
