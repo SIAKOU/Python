@@ -7,7 +7,7 @@ from DjangoProjectexposer.models import Client, Marchandise, Paiement
 
 
 def paiements_invalides(request):
-    invalid_paiements = Paiement.objects.select_related('client').filter(est_valide=False)
+    invalid_paiements = Paiement.objects.filter(est_valide=False)
     return render(request, 'paiement/li_paiements_invalides.html', {'invalid_paiements': invalid_paiements})
 
 

@@ -1,43 +1,97 @@
-{% load static %}
+{% extends 'paiement/base_liste_paiements.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="{% static 'paiement/styles/style_li__paiement.css' %}">
-    <title>Liste des Paiements Invalides</title></head>
-<body>
-<h1>Liste des Paiements Invalides</h1>
-<table>
-    <thead>
-    <tr>
-        <th>Client</th>
-        <th>Montant Total</th>
-        <th>Date de Paiement</th>
-        <th>Marchandises</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for paiement in invalid_paiements %}
-        <tr>
-            <td>{{ paiement.client.nom }} {{ paiement.client.prenom }}</td>
-            <td>{{ paiement.montant_total }}</td>
-            <td>{{ paiement.date_paiement }}</td>
-            <td>
-                <ul>
-                    {% for marchandise in paiement.marchandises.marchandises %}
-                        <li>{{ marchandise }}</li>
-                    {% endfor %}
-                </ul>
-            </td>
-        </tr>
-    {% empty %}
-        <tr>
-            <td colspan="4">Aucun paiement invalide trouvé.</td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
-</body>
-</html>
+{% block content %}
+    <div class=" container card text-center mt-5">
+        <h1>Listes des paiements Invalides</h1>
+    </div>
+    <div class="card container mt-3 mb-5 flex-1"
+         style="background: #080126; box-shadow: 10px 10px 10px rgba(34,36,38,0.7)">
+        <table class="container table mt-5">
+            <thead>
+            <tr>
+                <th scope="col">Client</th>
+                <th scope="col">Montant</th>
+                <th scope="col">Date paiement</th>
+                <th scope="col">Marchandise</th>
+                <th scope="col">Statut</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for paiement in invalid_paiements %}
+                <tr class="table-active">
+                    <td>
+                        <a href="/client/{{ paiement.client.id_client }}" class="btn btn-link text-decoration-none">
+                            {{ paiement.client.nom }} {{ paiement.client.prenom }}
+                        </a>
+                    </td>
+                    <td>{{ paiement.montant_total }}</td>
+                    <td>{{ paiement.date_paiement }}</td>
+                    <td>
+                        <ul>
+                            {% for marchandise in paiement.marchandises %}
+                                <li>{{ marchandise.nom }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>
+                        <i class="fas fa-times-circle text-danger" title="Statut invalide"></i>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="5"> <p style="text-align: center; color: black; font-size: 1.5rem; margin-top: 2rem;">
+                        Aucun paiement invalide trouvé.</p></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
+
+
+
+{#{% load static %}#}
+{##}
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>#}
+{#    <link rel="stylesheet" href="{% static 'paiement/styles/style_li__paiement.css' %}">#}
+{#    <title>Liste des Paiements Invalides</title></head>#}
+{#<body>#}
+{#<h1>Liste des Paiements Invalides</h1>#}
+{#<table>#}
+{#    <thead>#}
+{#    <tr>#}
+{#        <th>Client</th>#}
+{#        <th>Montant Total</th>#}
+{#        <th>Date de Paiement</th>#}
+{#        <th>Marchandises</th>#}
+{#    </tr>#}
+{#    </thead>#}
+{#    <tbody>#}
+{#    {% for paiement in invalid_paiements %}#}
+{#        <tr>#}
+{#            <td>{{ paiement.client.nom }} {{ paiement.client.prenom }}</td>#}
+{#            <td>{{ paiement.montant_total }}</td>#}
+{#            <td>{{ paiement.date_paiement }}</td>#}
+{#            <td>#}
+{#                <ul>#}
+{#                    {% for marchandise in paiement.marchandises.marchandises %}#}
+{#                        <li>{{ marchandise }}</li>#}
+{#                    {% endfor %}#}
+{#                </ul>#}
+{#            </td>#}
+{#        </tr>#}
+{#    {% empty %}#}
+{#        <tr>#}
+{#            <td colspan="4">Aucun paiement invalide trouvé.</td>#}
+{#        </tr>#}
+{#    {% endfor %}#}
+{#    </tbody>#}
+{#</table>#}
+{#</body>#}
+{#</html>#}

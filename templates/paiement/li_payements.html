@@ -4,19 +4,20 @@
     <div class=" container card text-center mt-5">
         <h1>Listes des paiements</h1>
     </div>
-    {% for paiement in paiements %}
-        <div class="card container mt-3 mb-5 flex-1"
-             style="background: #080126; box-shadow: 10px 10px 10px rgba(34,36,38,0.7)">
-            <table class="container table mt-5">
-                <thead>
-                <tr>
-                    <th scope="col">Client</th>
-                    <th scope="col">Montant</th>
-                    <th scope="col">Date paiement</th>
-                    <th scope="col">Marchandise</th>
-                </tr>
-                </thead>
-                <tbody>
+    <div class="card container mt-3 mb-5 flex-1"
+         style="background: #080126; box-shadow: 10px 10px 10px rgba(34,36,38,0.7)">
+        <table class="container table mt-5">
+
+            <thead>
+            <tr>
+                <th scope="col">Client</th>
+                <th scope="col">Montant</th>
+                <th scope="col">Date paiement</th>
+                <th scope="col">Marchandise</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for paiement in paiements %}
                 <tr class="table-active">
                     <td>
                         <a href="/client/{{ paiement.client.id_client }}" class="btn btn-link text-decoration-none">
@@ -33,10 +34,14 @@
                         </ul>
                     </td>
                 </tr>
-                </tbody>
-            </table>
-        </div>
-    {% empty %}
-        <p style="text-align: center; color: black; font-size: 1.5rem; margin-top: 2rem;">Aucun client trouvé.</p>
-    {% endfor %}
+            {% empty %}
+                <tr>
+                    <td colspan="5"><p style="text-align: center; color: black; font-size: 1.5rem; margin-top: 2rem;"> Aucun paiement n'été éffectué</p></td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+    </div>
 {% endblock %}
