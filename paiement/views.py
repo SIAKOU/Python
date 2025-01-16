@@ -1,6 +1,6 @@
 import uuid
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 
 from DjangoProjectexposer.models import Client, Marchandise, Paiement
@@ -63,3 +63,14 @@ def enregister_paiement(request):
     clients = Client.objects.all()
     marchandises = Marchandise.objects.all()
     return render(request, 'paiement/enregistrer_paiement.html', {'clients': clients, 'marchandises': marchandises})
+
+
+def supprimer_paiement(request, id_paiement):
+    paiement = get_object_or_404(Paiement, numero_paiement=id_paiement)
+    if request.method == 'POST':
+        # Vérifie si le bouton "supprimer" a été activé
+        if "supprimer" in request.POST:
+            paiement.delete()
+            return redirect('listePaiements')
+            # Affiche une page de confirmation pour la suppression
+    return render(request, 'paiement/supprimer_paiement.html', {'details': paiement})
