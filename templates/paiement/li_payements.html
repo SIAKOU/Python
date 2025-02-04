@@ -15,7 +15,7 @@
                 <th scope="col">Date paiement</th>
                 <th scope="col">Marchandise</th>
                 <th scope="col">Statut</th>
-                <th scope="col"></th>
+                <th scope="col">Action</th>
             </tr>
             </thead>
             <tbody>
@@ -26,14 +26,18 @@
                             {{ paiement.client.nom }} {{ paiement.client.prenom }}
                         </a>
                     </td>
-                    <td>{{ paiement.montant_total }}</td>
-                    <td>{{ paiement.date_paiement }}</td>
+                    <td>{{ paiement.montant_total }} £ </td>
+                    <td>{{ paiement.date_paiement }}  </td>
                     <td>
+                        {% if paiement.marchandises %}
                         <ul>
                             {% for marchandise in paiement.marchandises %}
-                                <li>{{ marchandise.nom }}</li>
+                              <li>{{ marchandise.nom }}</li>
                             {% endfor %}
                         </ul>
+                        {% else %}
+                        <p>Aucune marchandise</p>
+                        {% endif %}
                     </td>
                     <td>
                         {% if paiement.est_valide %}
@@ -42,7 +46,19 @@
                             <i class="fas fa-times-circle text-danger"></i>
                         {% endif %}
                     </td>
+
                     <td>
+                        <form action="{% url 'telecharger_recu' paiement.numero_paiement %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="format" value="xml">
+                            <button type="submit" class="btn btn-danger mt-2">Générer Reçu XML</button>
+                        </form>
+                        <form action="{% url 'telecharger_recu' paiement.numero_paiement %}" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="format" value="txt">
+                            <button type="submit" class="btn btn-danger mt-2" >Générer Reçu TXT</button>
+                        </form>
+                    
                         <!-- Formulaire pour la suppression -->
                         <form action="/paiement/delete/{{ paiement.numero_paiement }}/" method="post"
                               style="display: inline;">

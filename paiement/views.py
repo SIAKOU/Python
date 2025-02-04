@@ -1,7 +1,9 @@
 import uuid
-
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+import xml.etree.ElementTree as ET
+import json
 
 from DjangoProjectexposer.models import Client, Marchandise, Paiement
 
@@ -9,6 +11,13 @@ from DjangoProjectexposer.models import Client, Marchandise, Paiement
 def paiements_invalides(request):
     invalid_paiements = Paiement.objects.filter(est_valide=False).order_by('-date_paiement')
     return render(request, 'paiement/li_paiements_invalides.html', {'invalid_paiements': invalid_paiements})
+
+
+
+def search_marchandises(request):
+    query = request.GET.get('q', '')
+    results = Marchandise.objects.filter(nom__icontains=query).values('numero_marchandise', 'nom', 'prix')[:10]
+    return JsonResponse(list(results), safe=False)
 
 
 def liste_paiements(request):
@@ -74,3 +83,62 @@ def supprimer_paiement(request, id_paiement):
             return redirect('listePaiements')
             # Affiche une page de confirmation pour la suppression
     return render(request, 'paiement/supprimer_paiement.html', {'details': paiement})
+
+
+#creation de la vue qui permet de telecharger le recu de paiement
+def telecharger_recu(request, id_paiement):
+    paiement = get_object_or_404(Paiement, numero_paiement=id_paiement)
+
+    if request.method == 'POST':
+        format = request.POST.get('format')  # Get the desired format from the form data
+
+        if format == 'xml':
+            # Create the XML structure for the receipt
+            root = ET.Element("recu")
+            ET.SubElement(root, "numero_paiement").text = str(paiement.numero_paiement)
+            ET.SubElement(root, "client").text = paiement.client.nom
+            ET.SubElement(root, "montant_total").text = str(paiement.montant_total)
+            ET.SubElement(root, "date_paiement").text = paiement.date_paiement.strftime('%Y-%m-%d %H:%M:%S')
+
+            marchandises = paiement.marchandises  # Directly use the JSON field
+            marchandises_element = ET.SubElement(root, "marchandises")  # Define marchandises_element
+            for marchandise in marchandises:
+                marchandise_element = ET.SubElement(marchandises_element, "marchandise")
+                ET.SubElement(marchandise_element, "numero_marchandise").text = str(marchandise['numero_marchandise'])
+                ET.SubElement(marchandise_element, "nom").text = marchandise['nom']
+                ET.SubElement(marchandise_element, "description").text = marchandise['description']
+                ET.SubElement(marchandise_element, "prix").text = str(marchandise['prix'])
+
+            # Convert the XML structure to a string
+            recu_xml = ET.tostring(root, encoding='utf-8', method='xml')
+
+            # Create the HTTP response with the XML content
+            response = HttpResponse(recu_xml, content_type='application/xml')
+            response['Content-Disposition'] = f'attachment; filename="recu_{paiement.numero_paiement}.xml"'
+
+        elif format == 'txt':
+            # Create the TXT content for the receipt
+            recu_txt = f"Reçu de Paiement\n"
+            recu_txt += f"Numéro de Paiement: {paiement.numero_paiement}\n"
+            recu_txt += f"Client: {paiement.client.nom}\n"
+            recu_txt += f"Montant Total: {paiement.montant_total}\n"
+            recu_txt += f"Date de Paiement: {paiement.date_paiement.strftime('%Y-%m-%d %H:%M:%S')}\n"
+            recu_txt += f"Marchandises:\n"
+
+            for marchandise in paiement.marchandises:
+                recu_txt += f"  - Numéro: {marchandise['numero_marchandise']}\n"
+                recu_txt += f"    Nom: {marchandise['nom']}\n"
+                recu_txt += f"    Description: {marchandise['description']}\n"
+                recu_txt += f"    Prix: {marchandise['prix']} £ \n"
+
+            # Create the HTTP response with the TXT content
+            response = HttpResponse(recu_txt, content_type='text/plain')
+            response['Content-Disposition'] = f'attachment; filename="recu_{paiement.numero_paiement}.txt"'
+
+        else:
+            return HttpResponse("Format non supporté", status=400)
+
+        return response
+
+    return render(request, 'paiement/telecharger_recu.html', {'paiement': paiement})
+

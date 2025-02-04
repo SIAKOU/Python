@@ -16,34 +16,32 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-import Mapping
-import paiement.views
-from DjangoProjectexposer import settings
-from Mapping import views
+from django.conf import settings
 from django.conf.urls.static import static
+
+from Mapping import views as mapping_views
+from paiement import views as paiement_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Home, name='home'),
-    path('login/', views.create_user),
-    path('form/', views.form, name='form'),
-    path('map/', views.map),
-    path('client/', views.client, name='list_client'),
-    path('client/<int:id_client>/', Mapping.views.client_details, name='client'),
-    path('adresse/<int:id_client>/', Mapping.views.Adresse_Choice, name='ajouter_adresse'),
-    path('client/delete/<int:id_client>/', Mapping.views.supprimer_client, name='supprimer_client'),
-    path('client/modifier/<int:id_client>/', Mapping.views.modifier_client, name='modifier_client'),
+    path('', mapping_views.Home, name='home'),
+    path('login/', mapping_views.create_user),
+    path('form/', mapping_views.form, name='form'),
+    path('map/', mapping_views.map),
+    path('client/', mapping_views.client, name='list_client'),
+    path('client/<int:id_client>/', mapping_views.client_details, name='client'),
+    path('adresse/<int:id_client>/', mapping_views.Adresse_Choice, name='ajouter_adresse'),
+    path('client/delete/<int:id_client>/', mapping_views.supprimer_client, name='supprimer_client'),
+    path('client/modifier/<int:id_client>/', mapping_views.modifier_client, name='modifier_client'),
 
-    # path('paiement/', include('paiement.urls')),
-
-    path('paiement/enregistrer/', paiement.views.enregister_paiement, name='enregistrer_paiement'),
-    path('paiement/liste/', paiement.views.liste_paiements, name='listePaiements'),
-    path('paiement/invalides/', paiement.views.paiements_invalides, name='paiementsInvalides'),
-
-    path('paiement/delete/<int:id_paiement>/', paiement.views.supprimer_paiement, name='supprimer_paiement'),
-
+    # URLs pour paiement
+    path('paiement/enregistrer/', paiement_views.enregister_paiement, name='enregistrer_paiement'),
+    path('paiement/liste/', paiement_views.liste_paiements, name='listePaiements'),
+    path('paiement/invalides/', paiement_views.paiements_invalides, name='paiementsInvalides'),
+    path('paiement/telecharger_recu/<int:id_paiement>/', paiement_views.telecharger_recu, name='telecharger_recu'),
+    path('paiement/delete/<int:id_paiement>/', paiement_views.supprimer_paiement, name='supprimer_paiement'),
+    path('api/search-marchandises/', paiement_views.search_marchandises, name='search_marchandises'),
 ]
 
-if settings.DEBUG:  # Servir les fichiers médias seulement en développement
+if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

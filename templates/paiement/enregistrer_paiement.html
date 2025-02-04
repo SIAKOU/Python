@@ -25,6 +25,8 @@
                 </select>
             </div>
 
+            <!-- Section Marchandises -->
+            
             <div class="mb-3">
                 <label for="marchandises" class="form-label">Marchandises:</label>
                 <div id="marchandises-list">
@@ -88,7 +90,57 @@
                 }
             </script>
 
-            <button type="submit" class="btn btn-primary" onclick="showPaymentMessage()"> PAYER</button>
+            <button type="submit" class="btn btn-primary">PAYER</button>
         </form>
     </div>
+    
+    <script>
+        function searchMarchandises() {
+            const query = document.getElementById('searchMarchandise').value;
+            const spinner = document.querySelector('.spinner-border');
+            const searchResults = document.getElementById('searchResults');
+        
+            if (query.length > 0) {
+                spinner.style.display = 'inline-block';
+                fetch(`/search_marchandises?q=${query}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        spinner.style.display = 'none';
+                        searchResults.style.display = 'block';
+                        searchResults.innerHTML = '';
+                        data.forEach(item => {
+                            const resultItem = document.createElement('a');
+                            resultItem.className = 'list-group-item list-group-item-action';
+                            resultItem.textContent = `${item.nom} - ${item.prix} £`;
+                            resultItem.onclick = () => selectMarchandise(item);
+                            searchResults.appendChild(resultItem);
+                        });
+                    });
+            } else {
+                spinner.style.display = 'none';
+                searchResults.style.display = 'none';
+            }
+        }
+        
+        function selectMarchandise(marchandise) {
+            const selectedMarchandises = document.getElementById('selectedMarchandises');
+            const marchandiseItem = document.createElement('div');
+            marchandiseItem.className = 'form-check';
+            marchandiseItem.innerHTML = `
+                <input name="marchandise" class="form-check-input" type="checkbox" value="${marchandise.numero_marchandise}" data-prix="${marchandise.prix}" checked onchange="updateMontantTotal()">
+                <label class="form-check-label">${marchandise.nom} - ${marchandise.prix} £</label>
+            `;
+            selectedMarchandises.appendChild(marchandiseItem);
+            updateMontantTotal();
+        }
+        
+        function updateMontantTotal() {
+            let total = 0;
+            document.querySelectorAll('input[name="marchandise"]:checked').forEach(input => {
+                total += parseFloat(input.getAttribute('data-prix'));
+            });
+            document.getElementById('montant_total').textContent = total.toFixed(2);
+            document.getElementById('hidden_montant_total').value = total.toFixed(2);
+        }
+    </script>
 {% endblock %}
