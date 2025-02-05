@@ -90,10 +90,10 @@ def telecharger_recu(request, id_paiement):
     paiement = get_object_or_404(Paiement, numero_paiement=id_paiement)
 
     if request.method == 'POST':
-        format = request.POST.get('format')  # Get the desired format from the form data
+        format = request.POST.get('format')  # reception du format de fichier a telecharger   
 
         if format == 'xml':
-            # Create the XML structure for the receipt
+            # Creation de la structure du fichier xml
             root = ET.Element("recu")
             ET.SubElement(root, "numero_paiement").text = str(paiement.numero_paiement)
             ET.SubElement(root, "client").text = paiement.client.nom
@@ -101,7 +101,7 @@ def telecharger_recu(request, id_paiement):
             ET.SubElement(root, "date_paiement").text = paiement.date_paiement.strftime('%Y-%m-%d %H:%M:%S')
 
             marchandises = paiement.marchandises  # Directly use the JSON field
-            marchandises_element = ET.SubElement(root, "marchandises")  # Define marchandises_element
+            marchandises_element = ET.SubElement(root, "marchandises")  # Definition des element de la marchandise dans le fichier xml
             for marchandise in marchandises:
                 marchandise_element = ET.SubElement(marchandises_element, "marchandise")
                 ET.SubElement(marchandise_element, "numero_marchandise").text = str(marchandise['numero_marchandise'])
@@ -109,15 +109,15 @@ def telecharger_recu(request, id_paiement):
                 ET.SubElement(marchandise_element, "description").text = marchandise['description']
                 ET.SubElement(marchandise_element, "prix").text = str(marchandise['prix'])
 
-            # Convert the XML structure to a string
+            # je suis sur que vous avez compris 😊😊
             recu_xml = ET.tostring(root, encoding='utf-8', method='xml')
 
-            # Create the HTTP response with the XML content
+            #Creation du fichier  http response avec le contenu xml
             response = HttpResponse(recu_xml, content_type='application/xml')
             response['Content-Disposition'] = f'attachment; filename="recu_{paiement.numero_paiement}.xml"'
 
         elif format == 'txt':
-            # Create the TXT content for the receipt
+            # Craetion de la sttucture du recu en TXT 
             recu_txt = f"Reçu de Paiement\n"
             recu_txt += f"Numéro de Paiement: {paiement.numero_paiement}\n"
             recu_txt += f"Client: {paiement.client.nom}\n"
@@ -130,8 +130,8 @@ def telecharger_recu(request, id_paiement):
                 recu_txt += f"    Nom: {marchandise['nom']}\n"
                 recu_txt += f"    Description: {marchandise['description']}\n"
                 recu_txt += f"    Prix: {marchandise['prix']} £ \n"
-
-            # Create the HTTP response with the TXT content
+                
+            # 
             response = HttpResponse(recu_txt, content_type='text/plain')
             response['Content-Disposition'] = f'attachment; filename="recu_{paiement.numero_paiement}.txt"'
 

@@ -41,12 +41,14 @@ class Marchandise(models.Model):
     nom: str = models.CharField(max_length=50, null=False, unique=True)
     description: str = models.TextField(max_length=100, blank=True, null=True)
     prix: float = models.FloatField()
+    quantite: int = models.IntegerField(default=1)
 
 
 class Paiement(models.Model):
     numero_paiement = models.AutoField(primary_key=True)
     client = models.ForeignKey(Client, on_delete=models.CASCADE)
     marchandises = JSONField(default=dict)
+    quantite: int = models.IntegerField(default=1)
     montant_total: float = models.FloatField(default=0.00)
     date_paiement = models.DateTimeField(auto_now_add=True)
     est_valide: bool = models.BooleanField(default=False)

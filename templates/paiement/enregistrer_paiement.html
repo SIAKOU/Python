@@ -26,33 +26,28 @@
             </div>
 
             <!-- Section Marchandises -->
-            
             <div class="mb-3">
-                <label for="marchandises" class="form-label">Marchandises:</label>
-                <div id="marchandises-list">
-                    {% for marchandise in marchandises %}
-                        <div class="form-check">
-                            <input name="marchandise" class="form-check-input" type="checkbox"
-                                   value="{{ marchandise.numero_marchandise }}"
-                                   data-prix="{{ marchandise.prix }}" onchange="updateMontantTotal()">
-                            <label class="form-check-label" for="{{ marchandise.numero_marchandise }}">
-                                &nbsp; {{ marchandise.nom }} - {{ marchandise.prix }} £
-                            </label>
-                        </div>
-                    {% endfor %}
+                <label for="searchMarchandise" class="form-label">Rechercher Marchandises:</label>
+                <input type="text" id="searchMarchandise" class="form-control" oninput="searchMarchandises()">
+                <div class="spinner-border" role="status" style="display: none;">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
+                <div id="searchResults" class="list-group" style="display: none;"></div>
             </div>
 
             <div class="mb-3">
-                <label for="card-number" class="form-label"><i class="fa-solid fa-credit-card"></i> Numéro de
-                    carte</label>
+                <label for="selectedMarchandises" class="form-label">Marchandises Sélectionnées:</label>
+                <div id="selectedMarchandises"></div>
+            </div>
+
+            <div class="mb-3">
+                <label for="card-number" class="form-label"><i class="fa-solid fa-credit-card"></i> Numéro de carte</label>
                 <input type="text" id="card-number" name="card-number" class="form-control" required>
             </div>
 
             <div class="mb-3">
-                <label for="expiry" class="form-label"><i class="fa-solid fa-calendar-days"></i> Expiration
-                    (MM/AA)</label>
-                <input type="text" id="expiry" name="expiry" placeholder="MM/AA" class="form-control" required/>
+                <label for="expiry" class="form-label"><i class="fa-solid fa-calendar-days"></i> Expiration (JJ/MM/AA)</label>
+                <input type="date" id="expiry" name="expiry" placeholder="JJ/MM/AA" class="form-control" required/>
             </div>
 
             <div class="mb-3">
@@ -67,29 +62,6 @@
 
             <input type="hidden" id="hidden_montant_total" name="montant_total" value="0.00">
 
-            <script>
-                function updateHiddenInput() {
-                    const montantSpan = document.getElementById('montant_total');
-                    const hiddenInput = document.getElementById('hidden_montant_total');
-                    hiddenInput.value = montantSpan.textContent;
-                }
-
-                // Call updateHiddenInput whenever the total amount is updated
-                function updateMontantTotal() {
-                    let total = 0;
-
-                    const checkboxes = document.querySelectorAll('#marchandises-list .form-check-input:checked');
-                    checkboxes.forEach(checkbox => {
-                        total += parseFloat(checkbox.getAttribute('data-prix') || 0);
-                    });
-
-                    const montantSpan = document.getElementById('montant_total');
-                    montantSpan.textContent = total.toFixed(2);
-
-                    updateHiddenInput();
-                }
-            </script>
-
             <button type="submit" class="btn btn-primary">PAYER</button>
         </form>
     </div>
@@ -102,19 +74,29 @@
         
             if (query.length > 0) {
                 spinner.style.display = 'inline-block';
-                fetch(`/search_marchandises?q=${query}`)
+                fetch(`{% url 'search_marchandises' %}?q=${query}`)
                     .then(response => response.json())
                     .then(data => {
                         spinner.style.display = 'none';
                         searchResults.style.display = 'block';
                         searchResults.innerHTML = '';
-                        data.forEach(item => {
-                            const resultItem = document.createElement('a');
-                            resultItem.className = 'list-group-item list-group-item-action';
-                            resultItem.textContent = `${item.nom} - ${item.prix} £`;
-                            resultItem.onclick = () => selectMarchandise(item);
-                            searchResults.appendChild(resultItem);
-                        });
+                        if (data.length === 0) {
+                            searchResults.innerHTML = '<div class="list-group-item">Aucun résultat trouvé</div>';
+                        } else {
+                            data.forEach(item => {
+                                const resultItem = document.createElement('a');
+                                resultItem.className = 'list-group-item list-group-item-action';
+                                resultItem.textContent = `${item.nom} - ${item.prix} £`;
+                                resultItem.onclick = () => selectMarchandise(item);
+                                searchResults.appendChild(resultItem);
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        spinner.style.display = 'none';
+                        searchResults.style.display = 'block';
+                        searchResults.innerHTML = '<div class="list-group-item">Erreur lors de la recherche</div>';
+                        console.error('Error fetching marchandises:', error);
                     });
             } else {
                 spinner.style.display = 'none';
@@ -129,6 +111,7 @@
             marchandiseItem.innerHTML = `
                 <input name="marchandise" class="form-check-input" type="checkbox" value="${marchandise.numero_marchandise}" data-prix="${marchandise.prix}" checked onchange="updateMontantTotal()">
                 <label class="form-check-label">${marchandise.nom} - ${marchandise.prix} £</label>
+                <input type="number" name="quantite" class="form-control" value="1" min="1" onchange="updateMontantTotal()">
             `;
             selectedMarchandises.appendChild(marchandiseItem);
             updateMontantTotal();
@@ -137,7 +120,9 @@
         function updateMontantTotal() {
             let total = 0;
             document.querySelectorAll('input[name="marchandise"]:checked').forEach(input => {
-                total += parseFloat(input.getAttribute('data-prix'));
+                const prix = parseFloat(input.getAttribute('data-prix'));
+                const quantite = parseInt(input.nextElementSibling.nextElementSibling.value);
+                total += prix * quantite;
             });
             document.getElementById('montant_total').textContent = total.toFixed(2);
             document.getElementById('hidden_montant_total').value = total.toFixed(2);

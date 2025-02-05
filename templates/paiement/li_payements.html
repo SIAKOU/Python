@@ -14,6 +14,7 @@
                 <th scope="col">Montant</th>
                 <th scope="col">Date paiement</th>
                 <th scope="col">Marchandise</th>
+                <th scope="col">Quantité</th>
                 <th scope="col">Statut</th>
                 <th scope="col">Action</th>
             </tr>
@@ -22,7 +23,7 @@
             {% for paiement in paiements %}
                 <tr class="table-active">
                     <td>
-                        <a href="/client/{{ paiement.client.client }}" class="btn btn-link text-decoration-none">
+                        <a href="/client/{{ paiement.client.id }}" class="btn btn-link text-decoration-none">
                             {{ paiement.client.nom }} {{ paiement.client.prenom }}
                         </a>
                     </td>
@@ -40,25 +41,43 @@
                         {% endif %}
                     </td>
                     <td>
+                        {% if paiement.marchandises %}
+                        <ul>
+                            {% for marchandise in paiement.marchandises %}
+                              <li>{{ marchandise.quantité }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p>0</p>
+                        {% endif %}
+                    </td>
+                    <td>
                         {% if paiement.est_valide %}
                             <i class="fas fa-check-circle text-success"></i>
                         {% else %}
                             <i class="fas fa-times-circle text-danger"></i>
                         {% endif %}
                     </td>
-
-                    <td>
-                        <form action="{% url 'telecharger_recu' paiement.numero_paiement %}" method="post">
-                            {% csrf_token %}
-                            <input type="hidden" name="format" value="xml">
-                            <button type="submit" class="btn btn-danger mt-2">Générer Reçu XML</button>
-                        </form>
-                        <form action="{% url 'telecharger_recu' paiement.numero_paiement %}" method="post">
-                            {% csrf_token %}
-                            <input type="hidden" name="format" value="txt">
-                            <button type="submit" class="btn btn-danger mt-2" >Générer Reçu TXT</button>
-                        </form>
                     
+                    <!-- button pour generer les recu sout different format -->
+                    <td>
+                     
+                    <form action="{% url 'telecharger_recu' paiement.numero_paiement %}" method="post" onsubmit="return showNotification('XML')">
+                        {% csrf_token %}
+                        <input type="hidden" name="format" value="xml">
+                        <button type="submit" class="btn btn-danger mt-2">Générer Reçu XML</button>
+                    </form>
+                    <form action="{% url 'telecharger_recu' paiement.numero_paiement %}" method="post" onsubmit="return showNotification('TXT')">
+                        {% csrf_token %}
+                        <input type="hidden" name="format" value="txt">
+                        <button type="submit" class="btn btn-danger mt-2">Générer Reçu TXT</button>
+                    </form>
+                    <script>
+                        function showNotification(format) {
+                            alert('Le reçu ' + format + ' a été généré avec succès.');
+                            return true;
+                        }
+                    </script>
                         <!-- Formulaire pour la suppression -->
                         <form action="/paiement/delete/{{ paiement.numero_paiement }}/" method="post"
                               style="display: inline;">
@@ -71,7 +90,7 @@
                 </tr>
             {% empty %}
                 <tr>
-                    <td colspan="5"><p style="text-align: center; color: black; font-size: 1.5rem; margin-top: 2rem;">
+                    <td colspan="7"><p style="text-align: center; color: black; font-size: 1.5rem; margin-top: 2rem;">
                         Aucun paiement n'été éffectué</p></td>
                 </tr>
             {% endfor %}
